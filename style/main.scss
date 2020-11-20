@@ -1,0 +1,114 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Microsoft JhengHei", serif;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  color: #fff;
+  background: #20b6c4;
+  font-size: 22px;
+  display: flex;
+
+  .header-button {
+    width: 22px;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+      font-size: 22px;
+      color: #fff;
+    }
+  }
+  .logo {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 70px;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  color: #a9a9a9;
+  bottom: 0;
+  border-top: 1px solid #e4e4e4;
+  box-sizing: border-box;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .tab-bars {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    line-height: 1;
+
+    .bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-width: 50px;
+      .icon {
+        width: 20px;
+        height: 20px;
+        &.home {
+          background: url("../images/home.png") center center no-repeat;
+          background-size: contain;
+        }
+        &.calendar {
+          background: url("../images/calendar.png") center center no-repeat;
+          background-size: contain;
+        }
+      }
+      > div + div {
+        padding-top: 2px;
+      }
+      &.active {
+        color: #20b6c4;
+        .icon {
+          &.home {
+            background: url("../images/home-active.png") center center no-repeat;
+            background-size: contain;
+          }
+          &.calendar {
+            background: url("../images/calendar-active.png") center center
+              no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+
+  .qrcode {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}
+
+main {
+  width: 100%;
+  height: calc(100% - 120px);
+}

@@ -1,3 +1,5 @@
+$main-color: #20b6c4;
+
 html,
 body {
   width: 100%;
@@ -9,7 +11,7 @@ header {
   width: 100%;
   height: 70px;
   color: #fff;
-  background: #20b6c4;
+  background: $main-color;
   font-size: 22px;
   display: flex;
 
@@ -20,17 +22,20 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+
     i {
       font-size: 22px;
       color: #fff;
     }
   }
+
   .logo {
     width: 100%;
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+
     img {
       height: 70px;
     }
@@ -65,28 +70,35 @@ footer {
       align-items: center;
       flex-direction: column;
       min-width: 50px;
+
       .icon {
         width: 20px;
         height: 20px;
+
         &.home {
           background: url("../images/home.png") center center no-repeat;
           background-size: contain;
         }
+
         &.calendar {
           background: url("../images/calendar.png") center center no-repeat;
           background-size: contain;
         }
       }
+
       > div + div {
         padding-top: 2px;
       }
+
       &.active {
-        color: #20b6c4;
+        color: $main-color;
+
         .icon {
           &.home {
             background: url("../images/home-active.png") center center no-repeat;
             background-size: contain;
           }
+
           &.calendar {
             background: url("../images/calendar-active.png") center center
               no-repeat;
@@ -111,4 +123,40 @@ footer {
 main {
   width: 100%;
   height: calc(100% - 120px);
+  position: relative;
+
+  .banner {
+    width: 100%;
+    height: 59%;
+    background: url(../images/tablecloth.jpg) center center no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .menu {
+    width: 100%;
+    height: 50%;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    bottom: 0;
+    color: $main-color;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+
+    .menu-item {
+      width: calc(100% / 3);
+      height: calc(100% / 2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
 }

@@ -23,20 +23,65 @@
         <i class="far fa-bell"></i>
       </div>
     </header>
-    <main></main>
-    <footer>
-        <div class="tab-bars">
-            <div class="bar active">
-                <div class="icon home"></div>
-                <div>Home</div>
-            </div>
-            <div class="bar">
-                <div class="icon calendar"></div>
-                <div>Calendar</div>
-            </div>
+    <main>
+      <div class="banner"></div>
+      <div class="menu">
+        <div class="menu-item reservation">
+          <img src="./images/home-1.png" alt="home-1" />
+          <div>預約</div>
         </div>
-        <img class="qrcode" src="./images/qrcode.png" alt="qrcode">
+        <div class="menu-item cost">
+          <img src="./images/home-2.png" alt="home-1" />
+          <div>費用</div>
+        </div>
+        <div class="menu-item points">
+          <img src="./images/home-3.png" alt="home-1" />
+          <div>點數</div>
+        </div>
+        <div class="menu-item application">
+          <img src="./images/home-4.png" alt="home-1" />
+          <div>申請</div>
+        </div>
+        <div class="menu-item info">
+          <img src="./images/home-5.png" alt="home-1" />
+          <div>資訊</div>
+        </div>
+        <div class="menu-item activity">
+          <img src="./images/home-6.png" alt="home-1" />
+          <div>活動</div>
+        </div>
+      </div>
+    </main>
+    <div style="display: none">申請</div>
+    <footer>
+      <div class="tab-bars">
+        <div class="bar active">
+          <div class="icon home"></div>
+          <div>Home</div>
+        </div>
+        <div class="bar">
+          <div class="icon calendar"></div>
+          <div>Calendar</div>
+        </div>
+      </div>
+      <img class="qrcode" src="./images/qrcode.png" alt="qrcode" />
     </footer>
   </body>
   <script src="./js/jquery-3.5.1.js"></script>
+  <script>
+    var application = $(".application");
+    var reservation = $(".reservation");
+
+    application.on("click", () => {
+      var stateObj = { active: "application" };
+      history.pushState(stateObj, "page 2", "index.html");
+    });
+
+    reservation.on("click", () => {
+      var stateObj = { active: "reservation" };
+      history.pushState(stateObj, "page 2", "index.html");
+    });
+
+    console.log(history.state)
+  </script>
 </html>

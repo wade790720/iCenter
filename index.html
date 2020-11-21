@@ -1,87 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./style/normalize.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css"
-    />
-    <link rel="stylesheet" href="./style/main.css" />
-  </head>
-  <body>
-    <header>
-      <div class="header-button">
-        <i class="fas fa-bars"></i>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./style/normalize.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css" />
+  <link rel="stylesheet" href="./style/main.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-button">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="logo">
+      <img src="./images/logo.png" alt="logo" />
+    </div>
+    <div class="header-button">
+      <i class="far fa-bell"></i>
+    </div>
+  </header>
+  <main class="home-page">
+    <div class="banner"></div>
+    <div class="menu">
+      <div class="menu-item reservation">
+        <img src="./images/home-1.png" alt="home-1" />
+        <div>預約</div>
       </div>
-      <div class="logo">
-        <img src="./images/logo.png" alt="logo" />
+      <div class="menu-item cost">
+        <img src="./images/home-2.png" alt="home-1" />
+        <div>費用</div>
       </div>
-      <div class="header-button">
-        <i class="far fa-bell"></i>
+      <div class="menu-item points">
+        <img src="./images/home-3.png" alt="home-1" />
+        <div>點數</div>
       </div>
-    </header>
-    <main>
-      <div class="banner"></div>
+      <div class="menu-item apply">
+        <img src="./images/home-4.png" alt="home-1" />
+        <div>申請</div>
+      </div>
+      <div class="menu-item info">
+        <img src="./images/home-5.png" alt="home-1" />
+        <div>資訊</div>
+      </div>
+      <div class="menu-item activity">
+        <img src="./images/home-6.png" alt="home-1" />
+        <div>活動</div>
+      </div>
+    </div>
+  </main>
+  <div class="page apply-page">
+    <div class="back-section"></div>
+    <h2>請選擇你要申請的服務</h2>
+    <div class="container">
       <div class="menu">
-        <div class="menu-item reservation">
-          <img src="./images/home-1.png" alt="home-1" />
-          <div>預約</div>
+        <div class="menu-item network">
+          <div class="wrapper">
+            <img src="./images/apply-network.png" alt="network" />
+            <div>寬帶網路</div>
+          </div>
         </div>
-        <div class="menu-item cost">
-          <img src="./images/home-2.png" alt="home-1" />
-          <div>費用</div>
+        <div class="menu-item clean">
+          <img src="./images/apply-clean.png" alt="clean" />
+          <div>辦公室清潔</div>
         </div>
-        <div class="menu-item points">
-          <img src="./images/home-3.png" alt="home-1" />
-          <div>點數</div>
+        <div class="menu-item repair">
+          <img src="./images/apply-repair.png" alt="repair" />
+          <div>修繕</div>
         </div>
-        <div class="menu-item application">
-          <img src="./images/home-4.png" alt="home-1" />
-          <div>申請</div>
+        <div class="menu-item agent">
+          <img src="./images/apply-agent.png" alt="agent" />
+          <div>商務代辦</div>
         </div>
-        <div class="menu-item info">
-          <img src="./images/home-5.png" alt="home-1" />
-          <div>資訊</div>
+        <div class="menu-item recruit">
+          <img src="./images/apply-recruit.png" alt="recruit" />
+          <div>招聘</div>
         </div>
-        <div class="menu-item activity">
-          <img src="./images/home-6.png" alt="home-1" />
-          <div>活動</div>
+        <div class="menu-item rent-house">
+          <img src="./images/apply-rent-house.png" alt="rent-house" />
+          <div>租屋</div>
         </div>
-      </div>
-    </main>
-    <div style="display: none">申請</div>
-    <footer>
-      <div class="tab-bars">
-        <div class="bar active">
-          <div class="icon home"></div>
-          <div>Home</div>
+        <div class="menu-item financing">
+          <img src="./images/apply-financing.png" alt="financing" />
+          <div>資金融通</div>
         </div>
-        <div class="bar">
-          <div class="icon calendar"></div>
-          <div>Calendar</div>
+        <div class="menu-item insurance">
+          <img src="./images/apply-insurance.png" alt="insurance" />
+          <div>保險</div>
         </div>
       </div>
-      <img class="qrcode" src="./images/qrcode.png" alt="qrcode" />
-    </footer>
-  </body>
-  <script src="./js/jquery-3.5.1.js"></script>
-  <script>
-    var application = $(".application");
-    var reservation = $(".reservation");
+    </div>
+  </div>
+  <footer>
+    <div class="tab-bars">
+      <div class="bar active">
+        <div class="icon home"></div>
+        <div>Home</div>
+      </div>
+      <div class="bar">
+        <div class="icon calendar"></div>
+        <div>Calendar</div>
+      </div>
+    </div>
+    <img class="qrcode" src="./images/qrcode.png" alt="qrcode" />
+  </footer>
+</body>
+<script src="./js/jquery-3.5.1.js"></script>
+<script>
+  var apply = $(".apply");
+  var reservation = $(".reservation");
 
-    application.on("click", () => {
-      var stateObj = { active: "application" };
-      history.pushState(stateObj, "page 2", "index.html");
-    });
+  apply.on("click", () => {
+    var stateObj = {
+      active: "apply"
+    };
+    history.pushState(stateObj, "page 2", "index.html");
+    $('.apply-page').show();
+    $('.home-page').hide();
+  });
 
-    reservation.on("click", () => {
-      var stateObj = { active: "reservation" };
-      history.pushState(stateObj, "page 2", "index.html");
-    });
+  reservation.on("click", () => {
+    var stateObj = {
+      active: "reservation"
+    };
+    history.pushState(stateObj, "page 2", "index.html");
+  });
 
-    console.log(history.state)
-  </script>
+  console.log(history.state)
+</script>
+
 </html>

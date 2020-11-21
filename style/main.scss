@@ -7,6 +7,43 @@ body {
   font-family: "Microsoft JhengHei", serif;
 }
 
+h2 {
+  color: #5242a2;
+  border-left: 5px solid $main-color;
+  padding-left: 10px;
+  font-size: 20px;
+  margin: 0;
+  width: 100%;
+  height: 24px;
+  box-sizing: border-box;
+}
+
+.page {
+  width: 100%;
+  height: calc(100% - 120px);
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+
+  .back-section {
+    width: 100%;
+    height: 24px;
+    padding-bottom: 20px;
+
+    i {
+      font-size: 24px;
+      color: #988c8c;
+    }
+  }
+
+  .container {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    height: calc(100% - 68px);
+  }
+}
+
 header {
   width: 100%;
   height: 70px;
@@ -86,7 +123,7 @@ footer {
         }
       }
 
-      > div + div {
+      >div+div {
         padding-top: 2px;
       }
 
@@ -100,8 +137,7 @@ footer {
           }
 
           &.calendar {
-            background: url("../images/calendar-active.png") center center
-              no-repeat;
+            background: url("../images/calendar-active.png") center center no-repeat;
             background-size: contain;
           }
         }
@@ -120,7 +156,7 @@ footer {
   }
 }
 
-main {
+.home-page {
   width: 100%;
   height: calc(100% - 120px);
   position: relative;
@@ -129,7 +165,7 @@ main {
     width: 100%;
     height: 59%;
     background: url(../images/tablecloth.jpg) center center no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
   }
 
   .menu {
@@ -148,6 +184,37 @@ main {
     .menu-item {
       width: calc(100% / 3);
       height: calc(100% / 2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.apply-page {
+  display: none;
+
+  .container {
+    padding: 0;
+  }
+
+  .menu {
+    width: 100%;
+    height: 100%;
+    color: $main-color;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    .menu-item {
+      width: calc(100% / 2);
+      height: calc(100% / 4);
       display: flex;
       justify-content: center;
       align-items: center;

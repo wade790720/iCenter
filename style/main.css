@@ -16,6 +16,14 @@ h2 {
   box-sizing: border-box;
 }
 
+button {
+  border: 1px solid #20b6c4;
+  background: #fff;
+  border-radius: 3px;
+  padding: 5px 0;
+  min-width: 125px;
+}
+
 .page {
   width: 100%;
   height: calc(100% - 120px);
@@ -97,6 +105,7 @@ footer .tab-bars .bar {
   align-items: center;
   flex-direction: column;
   min-width: 50px;
+  width: 100%;
 }
 footer .tab-bars .bar .icon {
   width: 20px;
@@ -196,4 +205,73 @@ footer .qrcode {
 .apply-page .menu img {
   width: 60px;
   height: 60px;
+}
+
+.recruit-page {
+  display: none;
+  padding: 0;
+}
+.recruit-page .back-section {
+  padding: 20px;
+  width: initial;
+  height: initial;
+}
+.recruit-page .back-section .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recruit-page .title {
+  padding: 0 20px;
+}
+.recruit-page .container {
+  padding: 0;
+  margin-top: 15px;
+  position: relative;
+  height: calc(100% - 234px);
+  overflow: auto;
+}
+.recruit-page .container .item .foreword {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #e4e4e4;
+}
+.recruit-page .container .item .foreword .text {
+  flex: 1;
+}
+.recruit-page .container .item .foreword .action {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+}
+.recruit-page .container .item .foreword .action img {
+  width: 35px;
+  height: 35px;
+}
+.recruit-page .container .item .foreword .action i {
+  color: #a09797;
+}
+.recruit-page .container .item .dropdown {
+  display: none;
+}
+.recruit-page .container .item .dropdown .text-area {
+  padding: 15px 30px;
+  border-bottom: 2px solid #e4e4e4;
+  background: #f2f2f2;
+}
+.recruit-page .container .item .dropdown .text-area textarea {
+  width: 100%;
+  margin-top: 10px;
+  background: #f2f2f2;
+}
+.recruit-page .container .item .dropdown .text-area textarea:disabled {
+  border: none;
+}
+.recruit-page .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
 }

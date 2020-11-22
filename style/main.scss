@@ -18,6 +18,14 @@ h2 {
   box-sizing: border-box;
 }
 
+button {
+  border: 1px solid $main-color;
+  background: #fff;
+  border-radius: 3px;
+  padding: 5px 0;
+  min-width: 125px;
+}
+
 .page {
   width: 100%;
   height: calc(100% - 120px);
@@ -107,6 +115,7 @@ footer {
       align-items: center;
       flex-direction: column;
       min-width: 50px;
+      width: 100%;
 
       .icon {
         width: 20px;
@@ -225,5 +234,91 @@ footer {
       width: 60px;
       height: 60px;
     }
+  }
+}
+
+.recruit-page {
+  display: none;
+  padding: 0;
+
+  .back-section {
+    padding: 20px;
+    width: initial;
+    height: initial;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .title {
+    padding: 0 20px;
+  }
+
+  .container {
+    padding: 0;
+    margin-top: 15px;
+    position: relative;
+    height: calc(100% - 234px);
+    overflow: auto;
+
+    .item {
+      .foreword {
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid #e4e4e4;
+
+        .text {
+          flex: 1;
+        }
+
+        .action {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex: 1;
+
+          img {
+            width: 35px;
+            height: 35px;
+          }
+
+          i {
+            color: #a09797;
+          }
+        }
+      }
+
+      .dropdown {
+        display: none;
+
+        .text-area {
+          padding: 15px 30px;
+          border-bottom: 2px solid #e4e4e4;
+          background: #f2f2f2;
+
+          textarea {
+            width: 100%;
+            margin-top: 10px;
+            background: #f2f2f2;
+
+            &:disabled {
+              border: none
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125px;
   }
 }

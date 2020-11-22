@@ -22,6 +22,7 @@
       <i class="far fa-bell"></i>
     </div>
   </header>
+  <!-- 首頁 -->
   <main class="home-page">
     <div class="banner"></div>
     <div class="menu">
@@ -51,6 +52,8 @@
       </div>
     </div>
   </main>
+
+  <!-- 申請頁 -->
   <div class="page apply-page">
     <div class="back-section"></div>
     <h2>請選擇你要申請的服務</h2>
@@ -93,13 +96,54 @@
       </div>
     </div>
   </div>
+  <!-- 申請頁 - 招聘 -->
+  <div class="page recruit-page">
+    <div class="back-section">
+      <div class="header">
+        <i class="fas fa-chevron-left"></i>
+        <button>管理職缺</button>
+      </div>
+    </div>
+    <div class="title">
+      <h2>招聘申請</h2>
+    </div>
+    <div class="container">
+      <div class="item">
+        <div class="foreword">
+          <div class="text">10月20日 業務助理</div>
+          <div class="action">
+            <img src="./images/edit.png" alt="edit">
+            <img src="./images/delete.png" alt="delete">
+            <div class="toggle">
+              <!-- <i class="fas fa-chevron-up"></i> -->
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="text-area">
+            <div>工作內容：</div>
+            <textarea name="content" id="" cols="30" rows="5" disabled></textarea>
+          </div>
+          <div class="text-area">
+            <div>條件要求：</div>
+            <textarea name="condition" id="" cols="30" rows="5"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <button>新增職缺</button>
+    </div>
+  </div>
+
   <footer>
     <div class="tab-bars">
-      <div class="bar active">
+      <div class="bar home active">
         <div class="icon home"></div>
         <div>Home</div>
       </div>
-      <div class="bar">
+      <div class="bar calendar">
         <div class="icon calendar"></div>
         <div>Calendar</div>
       </div>
@@ -108,27 +152,6 @@
   </footer>
 </body>
 <script src="./js/jquery-3.5.1.js"></script>
-<script>
-  var apply = $(".apply");
-  var reservation = $(".reservation");
-
-  apply.on("click", () => {
-    var stateObj = {
-      active: "apply"
-    };
-    history.pushState(stateObj, "page 2", "index.html");
-    $('.apply-page').show();
-    $('.home-page').hide();
-  });
-
-  reservation.on("click", () => {
-    var stateObj = {
-      active: "reservation"
-    };
-    history.pushState(stateObj, "page 2", "index.html");
-  });
-
-  console.log(history.state)
-</script>
+<script src="./js/script.js"></script>
 
 </html>

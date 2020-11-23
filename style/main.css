@@ -16,12 +16,21 @@ h2 {
   box-sizing: border-box;
 }
 
+p {
+  margin: 0;
+  color: #a9a9a9;
+  font-size: 14px;
+}
+
 button {
   border: 1px solid #20b6c4;
   background: #fff;
   border-radius: 3px;
   padding: 5px 0;
   min-width: 125px;
+}
+button:focus {
+  outline: none;
 }
 
 .page {
@@ -45,6 +54,21 @@ button {
   width: 100%;
   box-sizing: border-box;
   height: calc(100% - 68px);
+}
+
+.input-group {
+  display: flex;
+  border-bottom: 1px solid #a9a9a9;
+}
+.input-group label {
+  flex: 1;
+}
+.input-group input {
+  border: none;
+  flex: 2;
+}
+.input-group input:focus {
+  outline: none;
 }
 
 header {
@@ -274,4 +298,58 @@ footer .qrcode {
   justify-content: center;
   align-items: center;
   height: 125px;
+}
+
+.recruit-page01 {
+  display: none;
+}
+.recruit-page01 .form {
+  padding: 20px 0;
+}
+.recruit-page01 .form > div + div {
+  padding-top: 20px;
+}
+.recruit-page01 .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.recruit-page02 {
+  display: none;
+}
+.recruit-page02 .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.recruit-page02 .bottom > button + button {
+  margin-left: 20px;
+}
+
+.recruit-page03 {
+  display: none;
+}
+.recruit-page03 .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.recruit-page03 .bottom > button + button {
+  margin-left: 20px;
 }

@@ -112,6 +112,28 @@
         <div class="foreword">
           <div class="text">10月20日 業務助理</div>
           <div class="action">
+            <img class="edit" src="./images/edit.png" alt="edit">
+            <img class="delete" src="./images/delete.png" alt="delete">
+            <div class="toggle">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="text-area">
+            <div>工作內容：</div>
+            <textarea name="content" id="" cols="30" rows="5" disabled></textarea>
+          </div>
+          <div class="text-area">
+            <div>條件要求：</div>
+            <textarea name="condition" id="" cols="30" rows="5" disabled></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="foreword">
+          <div class="text">10月20日 業務助理</div>
+          <div class="action">
             <img src="./images/edit.png" alt="edit">
             <img src="./images/delete.png" alt="delete">
             <div class="toggle">
@@ -133,7 +155,87 @@
       </div>
     </div>
     <div class="bottom">
-      <button>新增職缺</button>
+      <button class="add-job-btn">新增職缺</button>
+    </div>
+  </div>
+
+  <!-- 申請頁 - 招聘/新增職缺 -->
+  <div class="page recruit-page01">
+    <div class="back-section">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <h2>招聘申請</h2>
+    <div class="container">
+      <p>請於下方輸入您欲招聘的職務，我們將刊登於資訊中，協助您推廣。</p>
+      <div class="form">
+        <div class="input-group">
+          <label>職務名稱：</label>
+          <input type="text">
+        </div>
+        <div class="input-group">
+          <label>工作內容：</label>
+          <input type="text">
+        </div>
+        <div class="input-group">
+          <label>必備條件：</label>
+          <input type="text" placeholder="(學歷、語言、技能...)">
+        </div>
+        <div class="input-group">
+          <label>薪酬福利：</label>
+          <input type="text">
+        </div>
+        <div class="input-group">
+          <label>需求人數：</label>
+          <input type="text">
+        </div>
+        <div class="input-group">
+          <label>聯絡人：</label>
+          <input type="text">
+        </div>
+        <div class="input-group">
+          <label>聯絡人手機：</label>
+          <input type="text">
+        </div>
+        <div class="input-group">
+          <label>其他說明及注意事項：</label>
+          <input type="text">
+        </div>
+      </div>
+      <div class="bottom">
+        <button class="sumit">確認</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 申請頁 - 招聘/申請確認 -->
+  <div class="page recruit-page02">
+    <div class="back-section">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <h2>招聘申請</h2>
+    <div class="container">
+      <div>您已經申請了</div>
+      <div>招聘刊登服務</div>
+      <div>您欲招聘的職務如下：</div>
+      <div class="bottom">
+        <button>確認</button>
+        <button class="re-edit">重新編輯</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 申請頁 - 招聘/刪除招聘 -->
+  <div class="page recruit-page03">
+    <div class="back-section">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <h2>招聘申請</h2>
+    <div class="container">
+      <div>您確認要刪除此筆招聘嗎?</div>
+      <div class="bottom">
+        <button class="yes">是</button>
+        <button class="no">否</button>
+      </div>
     </div>
   </div>
 

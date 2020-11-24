@@ -1,0 +1,57 @@
+.clean-page {
+    display: none;
+    padding: 0;
+    font-weight: 900;
+    color: #302d2d;
+  
+    .back-section {
+      padding: 20px;
+      width: initial;
+      height: 24px;
+    }
+  
+    .title {
+      padding: 0 20px;
+    }
+  
+    .container {
+      padding: 0 36px;
+      margin-top: 10px;
+      position: relative;
+      height: calc(100% - 120px);
+      overflow: auto;
+  
+      .subtitle {
+        height: 25px;
+        font-size: 12px;
+        color: grey;
+      }
+  
+      .text-area {
+        height: 300px;
+        font-size: 15px;
+        line-height: 20px;
+  
+        .texttitle,ul  {
+          margin: 0px;
+        }
+      }
+  
+      .bottonarea {
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 20px;
+      }
+  
+      .Description {
+        padding-left: 18px;
+        line-height: 16px;
+  
+        li {
+          font-size: 12px;
+          color:grey
+        }
+      }
+    }
+  }
+  

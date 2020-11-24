@@ -10,12 +10,16 @@ var recruitPage = $('.recruit-page')
 var recruitPage01 = $('.recruit-page01')
 var recruitPage02 = $('.recruit-page02')
 var recruitPage03 = $('.recruit-page03')
+var networkPage = $('.network-page')
 
 tabHome.on("click", () => {
     homePage.show();
     applyPage.hide();
     recruitPage.hide();
     recruitPage01.hide();
+    recruitPage02.hide();
+    recruitPage03.hide();
+    networkPage.hide();
 })
 
 apply.on("click", () => {
@@ -27,11 +31,17 @@ apply.on("click", () => {
 });
 
 // 申請頁 - 選單
-var recruit = $('.apply-page .recruit')
+var recruit = $('.apply-page .menu .recruit')
+var network = $('.apply-page .menu .network')
 
 recruit.on('click', () => {
     applyPage.hide();
     recruitPage.show();
+})
+
+network.on('click', () => {
+    applyPage.hide();
+    networkPage.show();
 })
 
 

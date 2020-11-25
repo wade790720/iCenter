@@ -24,6 +24,8 @@ $grey-color: #848484;
     position: relative;
     height: calc(100% - 120px);
     overflow: auto;
+    display: flex;
+    flex-direction: column;
 
     .subtitle {
       font-size: 12px;
@@ -33,10 +35,10 @@ $grey-color: #848484;
 
     .choice {
       width: 100%;
-      height: calc(100% - 155px);
       font-size: 15px;
       line-height: 30px;
       color: rgba(0, 0, 0, 0.678);
+      flex: 1;
     }
 
     .bottom {

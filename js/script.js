@@ -11,39 +11,50 @@ var recruitPage01 = $('.recruit-page01')
 var recruitPage02 = $('.recruit-page02')
 var recruitPage03 = $('.recruit-page03')
 var networkPage = $('.network-page')
+var agentPage = $('.agent-page')
+var agentPage01 = $('.agent-page01')
 
 tabHome.on("click", () => {
     homePage.show();
-    applyPage.hide();
-    recruitPage.hide();
-    recruitPage01.hide();
-    recruitPage02.hide();
-    recruitPage03.hide();
-    networkPage.hide();
+    $('.page').hide()
 })
 
 apply.on("click", () => {
-    history.pushState({
-        page: 'apply'
-    }, "page", "index.html");
     applyPage.show();
     homePage.hide();
 });
 
 // 申請頁 - 選單
-var recruit = $('.apply-page .menu .recruit')
 var network = $('.apply-page .menu .network')
-
-recruit.on('click', () => {
-    applyPage.hide();
-    recruitPage.show();
-})
+var agent = $('.apply-page .menu .agent')
+var recruit = $('.apply-page .menu .recruit')
 
 network.on('click', () => {
     applyPage.hide();
     networkPage.show();
 })
 
+agent.on('click', () => {
+    applyPage.hide();
+    agentPage.show();
+})
+
+recruit.on('click', () => {
+    applyPage.hide();
+    recruitPage.show();
+})
+
+// 申請頁 - 寬帶網路
+networkPage.find('.back-section .fa-chevron-left').on('click', () => {
+    networkPage.hide();
+    applyPage.show();
+})
+
+// 申請頁 - 商務代辦
+agentPage.find('.submit').on('click', () => {
+    agentPage.hide();
+    agentPage01.show()
+})
 
 // 申請頁 - 招聘
 var itemList = recruitPage.find('.container .item')

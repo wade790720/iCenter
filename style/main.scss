@@ -340,6 +340,161 @@ footer {
   }
 }
 
+.network-page01 {
+  display: none;
+  color: $grey-color;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .container {
+    margin-top: 10px;
+    position: relative;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    .mark {
+      color: DarkTurquoise;
+    }
+
+    >p {
+      line-height: 20px;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 20px;
+
+      >button+button {
+        margin-left: 20px;
+      }
+    }
+
+    .description {
+      padding: 0 26px;
+
+      ul {
+        padding-left: 18px;
+        line-height: 22px;
+        margin: 0;
+
+        li {
+          font-size: 12px;
+          color: $grey-color
+        }
+      }
+    }
+  }
+}
+
+.clean-page {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .container {
+    margin-top: 10px;
+    position: relative;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      padding-left: 18px;
+      padding-bottom: 20px;
+      line-height: 22px;
+      margin: 0;
+    }
+
+    >p {
+      padding-bottom: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 20px;
+
+      >button+button {
+        margin-left: 20px;
+      }
+    }
+
+    .description {
+      padding: 0 26px;
+
+      ul {
+        padding-left: 18px;
+        line-height: 22px;
+        margin: 0;
+
+        li {
+          font-size: 12px;
+          color: $grey-color
+        }
+      }
+    }
+  }
+}
+
+.clean-page01 {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .container {
+    margin-top: 10px;
+    position: relative;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    >div {
+      line-height: 22px;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
 .agent-page {
   display: none;
 

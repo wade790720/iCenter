@@ -322,9 +322,12 @@ footer .qrcode {
   align-items: center;
   flex-direction: column;
   height: 125px;
+  position: relative;
 }
 .agent-page .wrapper .description {
   width: 100%;
+  position: absolute;
+  bottom: 20px;
 }
 .agent-page .wrapper .description ul {
   padding-top: 10px;

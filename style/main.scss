@@ -374,10 +374,13 @@ footer {
       align-items: center;
       flex-direction: column;
       height: 125px;
+      position: relative;
     }
 
     .description {
       width: 100%;
+      position: absolute;
+      bottom: 20px;
 
       ul {
         padding-top: 10px;

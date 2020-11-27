@@ -37,6 +37,50 @@ button:focus {
   padding-left: 10px;
 }
 
+.pignose-calendar {
+  width: 100%;
+  margin: 0;
+  max-width: inherit;
+  box-shadow: none;
+  border: none;
+}
+.pignose-calendar .pignose-calendar-top {
+  border: none;
+  box-shadow: none;
+  background: #fff;
+  padding: 20px 0;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #392f60;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-date .pignose-calendar-top-year {
+  font-size: 16px;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-prev .pignose-calendar-top-value {
+  margin-left: 10px;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-next .pignose-calendar-top-value {
+  margin-right: 10px;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-value {
+  color: #392f60;
+  height: 100%;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-icon {
+  color: #20b6c4;
+}
+.pignose-calendar .pignose-calendar-header {
+  background: #f2f2f2;
+  margin: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
 .page {
   width: 100%;
   height: calc(100% - 120px);
@@ -172,7 +216,6 @@ footer .qrcode {
 }
 
 .home-page {
-  display: none;
   width: 100%;
   height: calc(100% - 120px);
   position: relative;
@@ -210,41 +253,104 @@ footer .qrcode {
 }
 
 .points-page {
-  padding: 0;
+  display: none;
 }
-.points-page .pignose-calendar {
-  width: 100%;
-  margin: 0;
-  max-width: inherit;
-}
-.points-page .pignose-calendar .pignose-calendar-top {
-  border: none;
-  box-shadow: none;
-  background: #fff;
-}
-.points-page .pignose-calendar .pignose-calendar-top .pignose-calendar-top-prev .pignose-calendar-top-value {
-  margin-left: 10px;
-}
-.points-page .pignose-calendar .pignose-calendar-top .pignose-calendar-top-date {
+.points-page .wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  color: #392f60;
-}
-.points-page .pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-value {
-  color: #392f60;
   height: 100%;
 }
-.points-page .pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-icon {
-  color: #20b6c4;
+.points-page .container {
+  height: initial;
 }
-.points-page .pignose-calendar .pignose-calendar-header {
-  background: #f2f2f2;
-  margin: 0;
-  height: 60px;
+.points-page .container .details {
+  border-bottom: 1px solid #f2f2f2;
+}
+.points-page .container .item {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 12px;
+}
+.points-page .container .item.title {
+  border-bottom: 1px solid #f2f2f2;
+  color: #563fad;
+  font-size: 18px;
+  font-weight: bold;
+}
+.points-page .bottom {
+  display: flex;
+  flex-direction: column;
+}
+.points-page .bottom .button-group {
+  display: flex;
+  justify-content: center;
+}
+.points-page .bottom .button-group > button + button {
+  margin-left: 20px;
+}
+.points-page .description {
+  padding: 10px 26px;
+}
+.points-page .description ul {
+  padding-left: 18px;
+  line-height: 22px;
+  margin: 0;
+}
+.points-page .description ul li {
+  font-size: 12px;
+  color: #848484;
+}
+
+.points-page01 {
+  display: none;
+  padding: 0;
+}
+.points-page01 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.points-page01 .wrapper hr {
+  width: 90%;
+  border: 2px solid #f2f2f2;
+  margin: 0 auto;
+}
+.points-page01 .wrapper .title {
+  padding: 0 20px;
+}
+.points-page01 .wrapper .container {
+  flex: 1;
+  padding: 10px 20px;
+  overflow: auto;
+}
+.points-page01 .wrapper .container > div + div {
+  margin-top: 10px;
+}
+.points-page01 .wrapper .container .record {
+  padding: 10px;
+  font-size: 14px;
+}
+.points-page01 .wrapper .container .record > div + div {
+  margin-top: 10px;
+}
+.points-page01 .wrapper .container .give-point {
+  background: #aedce3;
+}
+.points-page01 .wrapper .container .use-point {
+  background: #9db7d4;
+}
+.points-page01 .wrapper .bottom {
+  display: flex;
+  flex-direction: column;
+}
+.points-page01 .wrapper .bottom .button-group {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 25px;
+}
+.points-page01 .wrapper .bottom .button-group > button + button {
+  margin-left: 20px;
 }
 
 .apply-page {

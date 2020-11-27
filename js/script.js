@@ -1,11 +1,13 @@
 // 首頁
 var tabHome = $('.tab-bars .bar.home')
 var reservation = $(".home-page .reservation");
+var points = $(".home-page .points");
 var apply = $(".home-page .apply");
 
 // 頁面
 var homePage = $('.home-page')
 var pointsPage = $('.points-page')
+var pointsPage01 = $('.points-page01')
 var applyPage = $('.apply-page')
 var recruitPage = $('.recruit-page')
 var recruitPage01 = $('.recruit-page01')
@@ -23,14 +25,29 @@ tabHome.on("click", () => {
     $('.page').hide()
 })
 
+points.on("click", () => {
+    pointsPage.show();
+    homePage.hide();
+});
+
 apply.on("click", () => {
     applyPage.show();
     homePage.hide();
 });
 
 // 點數頁
+pointsPage.find('.record').on('click', () => {
+    pointsPage.hide();
+    pointsPage01.show()
+})
+
+pointsPage01.find('.back').on('click', () => {
+    pointsPage01.hide();
+    pointsPage.show()
+})
+
 $(function () {
-    pointsPage.find('.calendar').pignoseCalendar({
+    pointsPage01.find('.calendar').pignoseCalendar({
         scheduleOptions: {
             colors: {
                 event: '#95be50'
@@ -52,13 +69,13 @@ $(function () {
             console.log($this);
         }
     });
-    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-sun').text('S')
-    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-mon').text('M')
-    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-tue').text('T')
-    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-wed').text('W')
-    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-thu').text('T')
-    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-fri').text('F')
-    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-sat').text('S')
+    pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-sun').text('S')
+    pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-mon').text('M')
+    pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-tue').text('T')
+    pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-wed').text('W')
+    pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-thu').text('T')
+    pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-fri').text('F')
+    pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-sat').text('S')
 });
 
 

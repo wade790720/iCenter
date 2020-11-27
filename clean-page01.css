@@ -1,0 +1,30 @@
+.clean-page-result {
+  display: none;
+  padding: 0;
+  font-weight: 900;
+}
+.clean-page-result .back-section {
+  padding: 20px;
+  width: initial;
+  height: 24px;
+}
+.clean-page-result .title {
+  padding: 0 20px;
+}
+.clean-page-result .container {
+  padding: 0 36px;
+  margin-top: 10px;
+  position: relative;
+  height: calc(100% - 120px);
+  overflow: auto;
+}
+.clean-page-result .container .text-area {
+  height: 325px;
+  font-size: 15px;
+  line-height: 3px;
+}
+.clean-page-result .container .botton-area {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}

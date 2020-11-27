@@ -1,57 +1,56 @@
 .clean-page {
-    display: none;
-    padding: 0;
-    font-weight: 900;
-    color: #302d2d;
+  display: none;
   
-    .back-section {
-      padding: 20px;
-      width: initial;
-      height: 24px;
-    }
-  
-    .title {
-      padding: 0 20px;
-    }
-  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
     .container {
-      padding: 0 36px;
-      margin-top: 10px;
-      position: relative;
-      height: calc(100% - 120px);
-      overflow: auto;
-  
-      .subtitle {
-        height: 25px;
-        font-size: 12px;
-        color: grey;
-      }
-  
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    
       .text-area {
-        height: 300px;
         font-size: 15px;
         line-height: 20px;
-  
-        .texttitle,ul  {
+    
+        >div {
+          margin-top:15px
+        }
+        
+        ul  {
           margin: 0px;
         }
       }
-  
-      .bottonarea {
+    }
+    
+    .bottom {
       display: flex;
-      justify-content: space-around;
-      padding-bottom: 20px;
-      }
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 125px;
+      position: relative;
+    }
+        
+    .description {
+      width: 100%;
+      position: absolute;
+      bottom: 20px;
   
-      .Description {
+      ul {
+        padding-top: 10px;
         padding-left: 18px;
         line-height: 16px;
+        margin: 0;
+        width: 100%;
   
         li {
           font-size: 12px;
-          color:grey
+          color: $grey-color
         }
       }
     }
   }
-  
+}

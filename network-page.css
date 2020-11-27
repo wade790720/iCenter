@@ -1,0 +1,59 @@
+.checkbox span {
+  padding-left: 10px;
+}
+
+.network-page {
+  display: none;
+  color: #848484;
+}
+.network-page .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.network-page .back-section .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.network-page .container {
+  margin-top: 10px;
+  position: relative;
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.network-page .container .choice {
+  width: 100%;
+  font-size: 15px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.678);
+  flex: 1;
+  padding-top: 15px;
+}
+.network-page .bottom {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+}
+.network-page .bottom .button-group {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.network-page .bottom .button-group > button + button {
+  margin-left: 20px;
+}
+.network-page .bottom .description {
+  padding: 0 26px;
+}
+.network-page .bottom .description ul {
+  padding-left: 18px;
+  line-height: 22px;
+  margin: 0;
+}
+.network-page .bottom .description ul li {
+  font-size: 12px;
+  color: #848484;
+}

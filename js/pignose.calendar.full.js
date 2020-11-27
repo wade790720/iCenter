@@ -907,7 +907,7 @@ define('methods/init',['../manager/index', '../component/classNames', '../compon
       calendarHtml: helper.format('<div class="{0} {0}-{4}">\
                                     <div class="{1}">\
                                       <a href="#" class="{1}-nav {1}-prev">\
-                                          <span class="icon-arrow-left {1}-icon"></span>\
+                                          <span class="fas fa-caret-left {1}-icon"></span>\
                                           <span class="{1}-value"></span>\
                                       </a>\
                                       <div class="{1}-date">\
@@ -916,7 +916,7 @@ define('methods/init',['../manager/index', '../component/classNames', '../compon
                                       </div>\
                                       <a href="#" class="{1}-nav {1}-next">\
                                           <span class="{1}-value"></span>\
-                                          <span class="icon-arrow-right {1}-icon"></span>\
+                                          <span class="fas fa-caret-right {1}-icon"></span>\
                                       </a>\
                                     </div>\
                                     <div class="{2}"></div>\
@@ -1183,8 +1183,8 @@ define('methods/init',['../manager/index', '../component/classNames', '../compon
         local.calendar.appendTo($parent.empty());
         local.calendar.find('.' + classNames.top + '-year').text(local.dateManager.year);
         local.calendar.find('.' + classNames.top + '-month').text(context.settings.monthsLong[local.dateManager.month - 1]);
-        local.calendar.find(helper.format('.{0}-prev .{0}-value', classNames.top)).text(context.settings.months[local.dateManager.prevMonth - 1].toUpperCase());
-        local.calendar.find(helper.format('.{0}-next .{0}-value', classNames.top)).text(context.settings.months[local.dateManager.nextMonth - 1].toUpperCase());
+        local.calendar.find(helper.format('.{0}-prev .{0}-value', classNames.top)).text(context.settings.months[local.dateManager.prevMonth - 1]);
+        local.calendar.find(helper.format('.{0}-next .{0}-value', classNames.top)).text(context.settings.months[local.dateManager.nextMonth - 1]);
 
         if (context.settings.buttons === true && $calendarButton) {
           var $super = $this;

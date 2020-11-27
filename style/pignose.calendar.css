@@ -429,12 +429,10 @@
 
 .pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-next{
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 .pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-prev{
   display: flex;
-  justify-content: center;
   align-items: center;
 }

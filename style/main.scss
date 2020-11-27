@@ -242,8 +242,55 @@ footer {
   }
 }
 
-.points-page{
+.points-page {
   // display: none;
+  padding: 0;
+
+  .pignose-calendar {
+    width: 100%;
+    margin: 0;
+    max-width: inherit;
+
+    .pignose-calendar-top {
+      border: none;
+      box-shadow: none;
+      background: #fff;
+
+      .pignose-calendar-top-prev {
+        .pignose-calendar-top-value {
+          margin-left: 10px;
+        }
+      }
+
+      .pignose-calendar-top-date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #392f60;
+      }
+      .pignose-calendar-top-nav {
+
+
+        .pignose-calendar-top-value {
+          color: #392f60;
+          height: 100%;
+        }
+
+        .pignose-calendar-top-icon {
+          color: $main-color;
+        }
+      }
+    }
+
+    .pignose-calendar-header {
+      background: #f2f2f2;
+      margin: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 .apply-page {

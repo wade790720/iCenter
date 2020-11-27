@@ -201,6 +201,7 @@ footer {
 }
 
 .home-page {
+  display: none;
   width: 100%;
   height: calc(100% - 120px);
   position: relative;
@@ -239,6 +240,10 @@ footer {
       height: 60px;
     }
   }
+}
+
+.points-page{
+  // display: none;
 }
 
 .apply-page {

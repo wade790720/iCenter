@@ -5,6 +5,7 @@ var apply = $(".home-page .apply");
 
 // 頁面
 var homePage = $('.home-page')
+var pointsPage = $('.points-page')
 var applyPage = $('.apply-page')
 var recruitPage = $('.recruit-page')
 var recruitPage01 = $('.recruit-page01')
@@ -26,6 +27,40 @@ apply.on("click", () => {
     applyPage.show();
     homePage.hide();
 });
+
+// 點數頁
+$(function () {
+    pointsPage.find('.calendar').pignoseCalendar({
+        scheduleOptions: {
+            colors: {
+                event: '#95be50'
+            }
+        },
+        schedules: [{
+            name: 'event',
+            date: '2020-11-25'
+        }, {
+            name: 'event',
+            date: '2020-11-19'
+        }, {
+            name: 'event',
+            date: '2020-11-05',
+        }],
+        select: function (date, context) {
+            var $this = $(this);
+
+            console.log($this);
+        }
+    });
+    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-sun').text('S')
+    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-mon').text('M')
+    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-tue').text('T')
+    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-wed').text('W')
+    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-thu').text('T')
+    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-fri').text('F')
+    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-sat').text('S')
+});
+
 
 // 申請頁 - 選單
 var network = $('.apply-page .menu .network')

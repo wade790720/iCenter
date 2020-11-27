@@ -172,6 +172,7 @@ footer .qrcode {
 }
 
 .home-page {
+  display: none;
   width: 100%;
   height: calc(100% - 120px);
   position: relative;

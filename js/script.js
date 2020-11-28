@@ -7,6 +7,7 @@ var apply = $(".home-page .apply");
 
 // 頁面
 var homePage = $('.home-page')
+var reservationPage = $('.reservation-page')
 var costPage = $('.cost-page')
 var costPage01 = $('.cost-page01')
 var pointsPage = $('.points-page')
@@ -28,6 +29,11 @@ tabHome.on("click", () => {
     homePage.show();
     $('.page').hide()
 })
+
+reservation.on("click", () => {
+    reservationPage.show();
+    homePage.hide();
+});
 
 cost.on("click", () => {
     costPage.show();

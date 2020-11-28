@@ -272,6 +272,54 @@ footer {
   }
 }
 
+.reservation-page {
+  display: none;
+  padding: 25px;
+
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+
+  .menu {
+    border: 1px solid $grey-color;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 240px;
+
+    .image {
+      padding: 0;
+      display: block;
+      width: 100%;
+      height: 110px;
+
+      &.meeting-room {
+        background: url(../images/reservation01.jpg) center center no-repeat;
+        background-size: cover;
+      }
+
+      &.gym {
+        background: url(../images/reservation02.jpg) center center no-repeat;
+        background-size: cover;
+      }
+
+      &.spa {
+        background: url(../images/reservation03.jpg) center center no-repeat;
+        background-size: cover;
+      }
+    }
+
+    >div {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+  }
+}
+
 .cost-page {
   display: none;
 

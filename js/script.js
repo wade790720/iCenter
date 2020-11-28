@@ -1,11 +1,13 @@
 // 首頁
 var tabHome = $('.tab-bars .bar.home')
 var reservation = $(".home-page .reservation");
+var cost = $(".home-page .cost");
 var points = $(".home-page .points");
 var apply = $(".home-page .apply");
 
 // 頁面
 var homePage = $('.home-page')
+var costPage = $('.cost-page')
 var pointsPage = $('.points-page')
 var pointsPage01 = $('.points-page01')
 var pointsPage02 = $('.points-page02')
@@ -25,6 +27,11 @@ tabHome.on("click", () => {
     homePage.show();
     $('.page').hide()
 })
+
+cost.on("click", () => {
+    costPage.show();
+    homePage.hide();
+});
 
 points.on("click", () => {
     pointsPage.show();

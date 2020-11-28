@@ -272,6 +272,64 @@ footer {
   }
 }
 
+.cost-page {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .block {
+      width: 100%;
+      flex: 1;
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+          flex: 1;
+        }
+
+        .status {
+          font-size: 20px;
+          font-weight: bold;
+
+          &.paid {
+            color: $main-color;
+          }
+
+          &.unpaid {
+            color: #848484;
+          }
+        }
+      }
+
+      .item {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        color: #848484;
+        font-size: 12px;
+
+        label {
+          padding-left: 15px;
+        }
+      }
+
+      .bottom {
+        height: initial;
+
+        .button-group {
+          justify-content: flex-end;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
 .points-page {
   display: none;
 

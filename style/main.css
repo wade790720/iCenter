@@ -235,6 +235,53 @@ footer .qrcode {
   height: 60px;
 }
 
+.cost-page {
+  display: none;
+}
+.cost-page .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.cost-page .wrapper .block {
+  width: 100%;
+  flex: 1;
+}
+.cost-page .wrapper .block .header {
+  display: flex;
+  justify-content: space-between;
+}
+.cost-page .wrapper .block .header h2 {
+  flex: 1;
+}
+.cost-page .wrapper .block .header .status {
+  font-size: 20px;
+  font-weight: bold;
+}
+.cost-page .wrapper .block .header .status.paid {
+  color: #20b6c4;
+}
+.cost-page .wrapper .block .header .status.unpaid {
+  color: #848484;
+}
+.cost-page .wrapper .block .item {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  color: #848484;
+  font-size: 12px;
+}
+.cost-page .wrapper .block .item label {
+  padding-left: 15px;
+}
+.cost-page .wrapper .block .bottom {
+  height: initial;
+}
+.cost-page .wrapper .block .bottom .button-group {
+  justify-content: flex-end;
+  padding: 0;
+}
+
 .points-page {
   display: none;
 }

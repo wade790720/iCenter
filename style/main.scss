@@ -297,20 +297,20 @@ footer {
           font-weight: bold;
 
           &.paid {
-            color: $main-color;
+            color: $grey-color;
           }
 
           &.unpaid {
-            color: #848484;
+            color: $main-color;
           }
         }
       }
 
       .item {
-        margin: 10px 0;
+        margin: 5px 0;
         display: flex;
         justify-content: space-between;
-        color: #848484;
+        color: $grey-color;
         font-size: 12px;
 
         label {
@@ -324,6 +324,98 @@ footer {
         .button-group {
           justify-content: flex-end;
           padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.cost-page01 {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .block {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .prompt {
+        padding: 10px 15px 25px
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+          flex: 1;
+        }
+
+        .status {
+          font-size: 20px;
+          font-weight: bold;
+
+          &.paid {
+            color: $grey-color;
+          }
+
+          &.unpaid {
+            color: $main-color;
+          }
+        }
+      }
+
+      .bottom {
+        height: 100px;
+
+        .button-group {
+          justify-content: flex-end;
+          padding: 0;
+        }
+      }
+    }
+
+    .item {
+      margin: 5px 0;
+      display: flex;
+      justify-content: space-between;
+      color: $grey-color;
+      font-size: 12px;
+
+      label {
+        padding-left: 15px;
+      }
+    }
+
+    .cost-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .row {
+        padding: 5px 15px;
+        border-top: 1px solid $grey-color;
+        border-bottom: 1px solid $grey-color;
+        font-size: 12px;
+
+        &.content {
+          overflow: auto;
+          flex: 1;
+          border: none
+        }
+
+        .item {
+          margin: 0;
+          color: #000;
+
+          label {
+            padding: 0;
+          }
         }
       }
     }
@@ -363,8 +455,6 @@ footer {
 
   .bottom {
     height: initial;
-
-
   }
 }
 

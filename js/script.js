@@ -8,6 +8,7 @@ var apply = $(".home-page .apply");
 // 頁面
 var homePage = $('.home-page')
 var costPage = $('.cost-page')
+var costPage01 = $('.cost-page01')
 var pointsPage = $('.points-page')
 var pointsPage01 = $('.points-page01')
 var pointsPage02 = $('.points-page02')
@@ -42,6 +43,12 @@ apply.on("click", () => {
     applyPage.show();
     homePage.hide();
 });
+
+// 費用頁
+costPage.find('.details').on('click', () => {
+    costPage.hide();
+    costPage01.show()
+})
 
 // 點數頁
 pointsPage.find('.buy').on('click', () => {

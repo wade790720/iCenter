@@ -1,5 +1,6 @@
 $main-color: #20b6c4;
 $grey-color: #848484;
+$light-grey-color: #f2f2f2;
 
 html,
 body {
@@ -320,6 +321,111 @@ footer {
   }
 }
 
+.reservation-page01 {
+  display: none;
+  color: $grey-color;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .back-section {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .container {
+    margin-top: 10px;
+    position: relative;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    >div+div {
+      margin-top: 20px;
+    }
+
+    .input-field {
+      position: relative;
+
+      &.date {
+        &::before {
+          background: url('../images/input-date.png') no-repeat center center;
+          background-size: contain;
+        }
+      }
+
+      &.time {
+        &::before {
+          background: url('../images/input-time.png') no-repeat center center;
+          background-size: contain;
+        }
+      }
+
+      &.join {
+        &::before {
+          background: url('../images/input-select.png') no-repeat center center;
+          background-size: contain;
+          width: 15px;
+          height: 15px;
+          right: 27px;
+        }
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 21px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+    }
+  }
+
+  input {
+    padding: 20px;
+    background: $light-grey-color;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: none;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+  }
+
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: none;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+  }
+
+  .bottom {
+    height: 100px;
+  }
+}
+
 .cost-page {
   display: none;
 
@@ -483,7 +589,7 @@ footer {
     height: initial;
 
     .details {
-      border-bottom: 1px solid #f2f2f2;
+      border-bottom: 1px solid $light-grey-color;
     }
 
     .item {
@@ -493,7 +599,7 @@ footer {
       font-size: 12px;
 
       &.title {
-        border-bottom: 1px solid #f2f2f2;
+        border-bottom: 1px solid $light-grey-color;
         color: #563fad;
         font-size: 18px;
         font-weight: bold;
@@ -517,7 +623,7 @@ footer {
 
     hr {
       width: 90%;
-      border: 2px solid #f2f2f2;
+      border: 2px solid $light-grey-color;
       margin: 0 auto;
     }
 
@@ -872,12 +978,12 @@ footer {
         .text-area {
           padding: 15px 30px;
           border-bottom: 2px solid #e4e4e4;
-          background: #f2f2f2;
+          background: $light-grey-color;
 
           textarea {
             width: 100%;
             margin-top: 10px;
-            background: #f2f2f2;
+            background: $light-grey-color;
 
             &:disabled {
               border: none

@@ -8,6 +8,7 @@ var apply = $(".home-page .apply");
 // 頁面
 var homePage = $('.home-page')
 var reservationPage = $('.reservation-page')
+var reservationPage01 = $('.reservation-page01')
 var costPage = $('.cost-page')
 var costPage01 = $('.cost-page01')
 var pointsPage = $('.points-page')
@@ -49,6 +50,17 @@ apply.on("click", () => {
     applyPage.show();
     homePage.hide();
 });
+
+// 預約頁
+reservationPage.find('.meeting-room').on('click', () => {
+    reservationPage.hide();
+    reservationPage01.show()
+})
+
+reservationPage01.find('.back-section .fa-chevron-left').on('click', () => {
+    reservationPage01.hide();
+    reservationPage.show();
+})
 
 // 費用頁
 costPage.find('.details').on('click', () => {

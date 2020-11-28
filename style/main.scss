@@ -43,65 +43,6 @@ button {
   }
 }
 
-.pignose-calendar {
-  width: 100%;
-  margin: 0;
-  max-width: inherit;
-  box-shadow: none;
-  border: none;
-
-  .pignose-calendar-top {
-    border: none;
-    box-shadow: none;
-    background: #fff;
-    padding: 20px 0;
-
-    .pignose-calendar-top-date {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      color: #392f60;
-
-      .pignose-calendar-top-year {
-        font-size: 16px;
-      }
-    }
-
-    .pignose-calendar-top-nav {
-
-      &.pignose-calendar-top-prev {
-        .pignose-calendar-top-value {
-          margin-left: 10px;
-        }
-      }
-
-      &.pignose-calendar-top-next {
-        .pignose-calendar-top-value {
-          margin-right: 10px;
-        }
-      }
-
-      .pignose-calendar-top-value {
-        color: #392f60;
-        height: 100%;
-      }
-
-      .pignose-calendar-top-icon {
-        color: $main-color;
-      }
-    }
-  }
-
-  .pignose-calendar-header {
-    background: #f2f2f2;
-    margin: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-  }
-}
-
 .page {
   width: 100%;
   height: calc(100% - 120px);
@@ -125,6 +66,37 @@ button {
     width: 100%;
     box-sizing: border-box;
     height: calc(100% - 68px);
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+
+  .button-group {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+
+    >button+button {
+      margin-left: 20px;
+    }
+  }
+}
+
+.description {
+  padding: 0 26px;
+
+  ul {
+    padding-left: 18px;
+    line-height: 22px;
+    margin: 0;
+
+    li {
+      font-size: 12px;
+      color: $grey-color
+    }
   }
 }
 
@@ -332,32 +304,9 @@ footer {
   }
 
   .bottom {
-    display: flex;
-    flex-direction: column;
+    height: initial;
 
-    .button-group {
-      display: flex;
-      justify-content: center;
 
-      >button+button {
-        margin-left: 20px;
-      }
-    }
-  }
-
-  .description {
-    padding: 10px 26px;
-
-    ul {
-      padding-left: 18px;
-      line-height: 22px;
-      margin: 0;
-
-      li {
-        font-size: 12px;
-        color: $grey-color
-      }
-    }
   }
 }
 
@@ -408,17 +357,10 @@ footer {
     }
 
     .bottom {
-      display: flex;
-      flex-direction: column;
+      height: initial;
 
       .button-group {
-        display: flex;
-        justify-content: center;
-        padding: 10px 0 25px;
-
-        >button+button {
-          margin-left: 20px;
-        }
+        padding-bottom: 25px;
       }
     }
   }
@@ -490,37 +432,6 @@ footer {
       padding-top: 15px;
     }
   }
-
-  .bottom {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-
-    .button-group {
-      display: flex;
-      justify-content: center;
-      padding-bottom: 20px;
-
-      >button+button {
-        margin-left: 20px;
-      }
-    }
-
-    .description {
-      padding: 0 26px;
-
-      ul {
-        padding-left: 18px;
-        line-height: 22px;
-        margin: 0;
-
-        li {
-          font-size: 12px;
-          color: $grey-color
-        }
-      }
-    }
-  }
 }
 
 .network-page01 {
@@ -547,37 +458,6 @@ footer {
 
     >p {
       line-height: 20px;
-    }
-  }
-
-  .bottom {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-
-    .button-group {
-      display: flex;
-      justify-content: center;
-      padding-bottom: 20px;
-
-      >button+button {
-        margin-left: 20px;
-      }
-    }
-
-    .description {
-      padding: 0 26px;
-
-      ul {
-        padding-left: 18px;
-        line-height: 22px;
-        margin: 0;
-
-        li {
-          font-size: 12px;
-          color: $grey-color
-        }
-      }
     }
   }
 }
@@ -613,34 +493,7 @@ footer {
   }
 
   .bottom {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-
-    .button-group {
-      display: flex;
-      justify-content: center;
-      padding-bottom: 20px;
-
-      >button+button {
-        margin-left: 20px;
-      }
-    }
-
-    .description {
-      padding: 0 26px;
-
-      ul {
-        padding-left: 18px;
-        line-height: 22px;
-        margin: 0;
-
-        li {
-          font-size: 12px;
-          color: $grey-color
-        }
-      }
-    }
+    height: 150px;
   }
 }
 
@@ -667,13 +520,10 @@ footer {
   }
 
   .bottom {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
+    height: 150px;
 
     .button-group {
-      display: flex;
-      justify-content: center;
+      padding-bottom: 0;
     }
   }
 }
@@ -707,31 +557,7 @@ footer {
     }
 
     .bottom {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
       height: 125px;
-      position: relative;
-    }
-
-    .description {
-      width: 100%;
-      position: absolute;
-      bottom: 20px;
-
-      ul {
-        padding-top: 10px;
-        padding-left: 18px;
-        line-height: 16px;
-        margin: 0;
-        width: 100%;
-
-        li {
-          font-size: 12px;
-          color: $grey-color
-        }
-      }
     }
   }
 }
@@ -756,10 +582,6 @@ footer {
     }
 
     .bottom {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
       height: 125px;
     }
   }

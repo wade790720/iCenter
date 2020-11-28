@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
   <header>
     <div class="header-button">
       <i class="fas fa-bars"></i>
@@ -24,6 +23,7 @@
       <i class="far fa-bell"></i>
     </div>
   </header>
+
   <!-- 首頁 -->
   <main class="home-page">
     <div class="banner"></div>
@@ -55,8 +55,288 @@
     </div>
   </main>
 
+  <!-- 預約頁 -->
+  <div class="page reservation-page">
+    <div class="menu-list">
+    <div class="menu">
+      <div class="image meeting-room"></div>
+      <div>會議室預約</div>
+    </div>
+    <div class="menu">
+      <div class="image gym"></div>
+      <div>健身休閒預約</div>
+    </div>
+    <div class="menu">
+      <div class="image spa"></div>
+      <div>SPA預約</div>
+    </div>
+  </div>
+  </div>
+
+  <!-- 費用頁 -->
+  <div class="page cost-page">
+    <div class="wrapper">
+      <div class="back-section"></div>
+      <div class="block">
+        <div class="header">
+          <h2>本期費用</h2>
+          <div class="status unpaid">未付</div>
+        </div>
+        <div class="item">
+          <label>計費期間：</label>
+          <div>US $2000</div>
+        </div>
+        <div class="item">
+          <label>繳費期間：</label>
+          <div>US $346</div>
+        </div>
+        <div class="item">
+          <label>合計</label>
+          <div>US $2346</div>
+        </div>
+        <div class="bottom">
+          <div class="button-group">
+            <button class="details">帳單明細</button>
+            <button class="pay">線上繳款</button>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="header">
+          <h2>本期費用</h2>
+          <div class="status paid">已付</div>
+        </div>
+        <div class="item">
+          <label>計費期間：</label>
+          <div>US $2000</div>
+        </div>
+        <div class="item">
+          <label>繳費期間：</label>
+          <div>US $346</div>
+        </div>
+        <div class="item">
+          <label>合計</label>
+          <div>US $2346</div>
+        </div>
+        <div class="bottom">
+          <div class="button-group">
+            <button class="details">帳單明細</button>
+            <button class="pay" disabled>線上繳款</button>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="header">
+          <h2>本期費用</h2>
+          <div class="status paid">已付</div>
+        </div>
+        <div class="item">
+          <label>計費期間：</label>
+          <div>US $2000</div>
+        </div>
+        <div class="item">
+          <label>繳費期間：</label>
+          <div>US $346</div>
+        </div>
+        <div class="item">
+          <label>合計</label>
+          <div>US $2346</div>
+        </div>
+        <div class="bottom">
+          <div class="button-group">
+            <button class="details">帳單明細</button>
+            <button class="pay" disabled>線上繳款</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 費用頁 - 帳單明細 -->
+  <div class="page cost-page01">
+    <div class="wrapper">
+      <div class="back-section"></div>
+      <div class="block">
+        <div class="header">
+          <h2>帳單明細表</h2>
+          <div class="status unpaid">未付</div>
+        </div>
+        <div class="item">
+          <label>計費時間：</label>
+          <div>2020-11-28 ~ 2020-12-07</div>
+        </div>
+        <div class="item">
+          <label>繳費時間：</label>
+          <div>2020-12-07</div>
+        </div>
+        <div class="cost-info">
+          <div class="row">固定費用</div>
+          <div class="row content"></div>
+          <div class="row">變動費用</div>
+          <div class="row content"></div>
+          <div class="row">
+            <div class="item">
+              <label>合計</label>
+              <div>US $2346</div>
+            </div>
+          </div>
+        </div>
+        <p class="prompt">此筆款項尚未繳納，請於繳款期限內繳付，謝謝。</p>
+        <div class="bottom">
+          <div class="button-group">
+            <button class="pay">線上繳款</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 點數頁 -->
   <div class="page points-page">
-    <div class="calendar"></div>
+    <div class="wrapper">
+      <div class="back-section"></div>
+      <div class="container">
+        <div class="item title">
+          <label>目前尚餘點數</label>
+          <div>40</div>
+        </div>
+        <div class="item title">
+          <label>本月已使用點數</label>
+          <div>40</div>
+        </div>
+        <div class="details">
+          <div class="item">
+            <label>本月免費點數</label>
+            <div>60</div>
+          </div>
+          <div class="item">
+            <label>本月購買點數</label>
+            <div>0</div>
+          </div>
+          <div class="item">
+            <label>前期結餘之購買點數</label>
+            <div>20</div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button class="buy">購買點數</button>
+          <button class="record">點數紀錄</button>
+        </div>
+      </div>
+      <div class="description">
+        <ul>
+          <li>本大樓之網路架設工程已完成，採統一管理，故欲申辦寬帶網路，需洽本大樓物管中心。</li>
+          <li>一經申請，需簽約12個月以上，如提前解約，需繳納違約金。</li>
+          <li>申請後，將由專人與您接洽。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 點數頁 - 點數紀錄 -->
+  <div class="page points-page01">
+    <div class="wrapper">
+      <div class="back-section"></div>
+      <div class="title">
+        <h2>招聘申請</h2>
+      </div>
+      <div class="calendar"></div>
+      <hr>
+      <div class="container">
+        <div class="record give-point">
+          <div class="date">
+            10月1日 週二
+          </div>
+          <div class="detail">
+            贈送免費點數 20點
+          </div>
+        </div>
+        <div class="record use-point">
+          <div class="date">
+            10月1日 週二
+          </div>
+          <div class="time">
+            下午2:00 to 下午4:00
+          </div>
+          <div class="detail">
+            贈送免費點數 20點
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button class="buy">購買點數</button>
+          <button class="back">返回</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 點數頁 - 購買點數 -->
+  <div class="page points-page02">
+    <div class="wrapper">
+      <div class="back-section"></div>
+      <h2>購買點數</h2>
+      <div class="container">
+        <p>請點選你要的購買點數</p>
+        <div class="choice">
+          <div class="checkbox">
+            <input type="checkbox" value="15mb">
+            <span>5點</span>
+            <span>$25</span>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" value="15mb">
+            <span>10點</span>
+            <span>$50</span>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" value="15mb">
+            <span>15點</span>
+            <span>$75</span>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" value="15mb">
+            <span>20點</span>
+            <span>$100</span>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" value="15mb">
+            <span>25點</span>
+            <span>$125</span>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" value="15mb">
+            <span>30點</span>
+            <span>$150</span>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" value="15mb">
+            <span>35點</span>
+            <span>$175</span>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" value="15mb">
+            <span>40點</span>
+            <span>$200</span>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button class="submit">確定</button>
+        </div>
+        <div class="description">
+          <ul>
+            <li>本大樓之網路架設工程已完成，採統一管理，故欲申辦寬帶網路，需洽本大樓物管中心。</li>
+            <li>一經申請，需簽約12個月以上，如提前解約，需繳納違約金。</li>
+            <li>申請後，將由專人與您接洽。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- 申請頁 -->
@@ -241,7 +521,9 @@
         <textarea name="" id="" cols="30" rows="10" placeholder="請說明，您欲申請的商務代辦事項："></textarea>
       </div>
       <div class="bottom">
-        <button class="submit">確定</button>
+        <div class="button-group">
+          <button class="submit">確定</button>
+        </div>
         <div class="description">
           <ul>
             <li>申請後，將由專人與您接洽。</li>
@@ -264,7 +546,9 @@
         </div>
       </div>
       <div class="bottom">
-        <button>確定</button>
+        <div class="button-group">
+          <button>確定</button>
+        </div>
       </div>
     </div>
   </div>
@@ -369,8 +653,10 @@
       <div>招聘刊登服務</div>
       <div>您欲招聘的職務如下：</div>
       <div class="bottom">
-        <button>確認</button>
-        <button class="re-edit">重新編輯</button>
+        <div class="button-group">
+          <button>確認</button>
+          <button class="re-edit">重新編輯</button>
+        </div>
       </div>
     </div>
   </div>
@@ -384,11 +670,14 @@
     <div class="container">
       <div>您確認要刪除此筆招聘嗎?</div>
       <div class="bottom">
-        <button class="yes">是</button>
-        <button class="no">否</button>
+        <div class="button-group">
+          <button class="yes">是</button>
+          <button class="no">否</button>
+        </div>
       </div>
     </div>
   </div>
+
   <footer>
     <div class="tab-bars">
       <div class="bar home active">

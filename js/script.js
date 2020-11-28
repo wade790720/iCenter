@@ -1,11 +1,18 @@
 // 首頁
 var tabHome = $('.tab-bars .bar.home')
 var reservation = $(".home-page .reservation");
+var cost = $(".home-page .cost");
+var points = $(".home-page .points");
 var apply = $(".home-page .apply");
 
 // 頁面
 var homePage = $('.home-page')
+var reservationPage = $('.reservation-page')
+var costPage = $('.cost-page')
+var costPage01 = $('.cost-page01')
 var pointsPage = $('.points-page')
+var pointsPage01 = $('.points-page01')
+var pointsPage02 = $('.points-page02')
 var applyPage = $('.apply-page')
 var recruitPage = $('.recruit-page')
 var recruitPage01 = $('.recruit-page01')
@@ -23,14 +30,55 @@ tabHome.on("click", () => {
     $('.page').hide()
 })
 
+reservation.on("click", () => {
+    reservationPage.show();
+    homePage.hide();
+});
+
+cost.on("click", () => {
+    costPage.show();
+    homePage.hide();
+});
+
+points.on("click", () => {
+    pointsPage.show();
+    homePage.hide();
+});
+
 apply.on("click", () => {
     applyPage.show();
     homePage.hide();
 });
 
+// 費用頁
+costPage.find('.details').on('click', () => {
+    costPage.hide();
+    costPage01.show()
+})
+
 // 點數頁
+pointsPage.find('.buy').on('click', () => {
+    pointsPage.hide();
+    pointsPage02.show()
+})
+
+pointsPage.find('.record').on('click', () => {
+    pointsPage.hide();
+    pointsPage01.show()
+})
+
+pointsPage01.find('.buy').on('click', () => {
+    pointsPage01.hide();
+    pointsPage02.show()
+})
+
+pointsPage01.find('.back').on('click', () => {
+    pointsPage01.hide();
+    pointsPage.show()
+})
+
 $(function () {
-    pointsPage.find('.calendar').pignoseCalendar({
+    pointsPage01.find('.calendar').pignoseCalendar({
         scheduleOptions: {
             colors: {
                 event: '#95be50'
@@ -52,13 +100,13 @@ $(function () {
             console.log($this);
         }
     });
-    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-sun').text('S')
-    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-mon').text('M')
-    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-tue').text('T')
-    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-wed').text('W')
-    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-thu').text('T')
-    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-fri').text('F')
-    pointsPage.find('.pignose-calendar-header .pignose-calendar-week-sat').text('S')
+    pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-sun').text('S')
+    pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-mon').text('M')
+    pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-tue').text('T')
+    pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-wed').text('W')
+    pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-thu').text('T')
+    pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-fri').text('F')
+    pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-sat').text('S')
 });
 
 

@@ -60,6 +60,33 @@ button:focus {
   height: calc(100% - 68px);
 }
 
+.bottom {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+}
+.bottom .button-group {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.bottom .button-group > button + button {
+  margin-left: 20px;
+}
+
+.description {
+  padding: 0 26px;
+}
+.description ul {
+  padding-left: 18px;
+  line-height: 22px;
+  margin: 0;
+}
+.description ul li {
+  font-size: 12px;
+  color: #848484;
+}
+
 .input-group {
   display: flex;
   border-bottom: 1px solid #848484;
@@ -172,7 +199,6 @@ footer .qrcode {
 }
 
 .home-page {
-  display: none;
   width: 100%;
   height: calc(100% - 120px);
   position: relative;
@@ -209,42 +235,267 @@ footer .qrcode {
   height: 60px;
 }
 
-.points-page {
-  padding: 0;
+.reservation-page {
+  display: none;
+  padding: 25px;
 }
-.points-page .pignose-calendar {
-  width: 100%;
-  margin: 0;
-  max-width: inherit;
-}
-.points-page .pignose-calendar .pignose-calendar-top {
-  border: none;
-  box-shadow: none;
-  background: #fff;
-}
-.points-page .pignose-calendar .pignose-calendar-top .pignose-calendar-top-prev .pignose-calendar-top-value {
-  margin-left: 10px;
-}
-.points-page .pignose-calendar .pignose-calendar-top .pignose-calendar-top-date {
+.reservation-page .menu-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  color: #392f60;
-}
-.points-page .pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-value {
-  color: #392f60;
+  justify-content: space-around;
+  align-items: center;
   height: 100%;
 }
-.points-page .pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-icon {
+.reservation-page .menu {
+  border: 1px solid #848484;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 240px;
+}
+.reservation-page .menu .image {
+  padding: 0;
+  display: block;
+  width: 100%;
+  height: 110px;
+}
+.reservation-page .menu .image.meeting-room {
+  background: url(../images/reservation01.jpg) center center no-repeat;
+  background-size: cover;
+}
+.reservation-page .menu .image.gym {
+  background: url(../images/reservation02.jpg) center center no-repeat;
+  background-size: cover;
+}
+.reservation-page .menu .image.spa {
+  background: url(../images/reservation03.jpg) center center no-repeat;
+  background-size: cover;
+}
+.reservation-page .menu > div {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.cost-page {
+  display: none;
+}
+.cost-page .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.cost-page .wrapper .block {
+  width: 100%;
+  flex: 1;
+}
+.cost-page .wrapper .block .header {
+  display: flex;
+  justify-content: space-between;
+}
+.cost-page .wrapper .block .header h2 {
+  flex: 1;
+}
+.cost-page .wrapper .block .header .status {
+  font-size: 20px;
+  font-weight: bold;
+}
+.cost-page .wrapper .block .header .status.paid {
+  color: #848484;
+}
+.cost-page .wrapper .block .header .status.unpaid {
   color: #20b6c4;
 }
-.points-page .pignose-calendar .pignose-calendar-header {
-  background: #f2f2f2;
-  margin: 0;
-  height: 60px;
+.cost-page .wrapper .block .item {
+  margin: 5px 0;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  color: #848484;
+  font-size: 12px;
+}
+.cost-page .wrapper .block .item label {
+  padding-left: 15px;
+}
+.cost-page .wrapper .block .bottom {
+  height: initial;
+}
+.cost-page .wrapper .block .bottom .button-group {
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.cost-page01 {
+  display: none;
+}
+.cost-page01 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.cost-page01 .wrapper .block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.cost-page01 .wrapper .block .prompt {
+  padding: 10px 15px 25px;
+}
+.cost-page01 .wrapper .block .header {
+  display: flex;
+  justify-content: space-between;
+}
+.cost-page01 .wrapper .block .header h2 {
+  flex: 1;
+}
+.cost-page01 .wrapper .block .header .status {
+  font-size: 20px;
+  font-weight: bold;
+}
+.cost-page01 .wrapper .block .header .status.paid {
+  color: #848484;
+}
+.cost-page01 .wrapper .block .header .status.unpaid {
+  color: #20b6c4;
+}
+.cost-page01 .wrapper .block .bottom {
+  height: 100px;
+}
+.cost-page01 .wrapper .block .bottom .button-group {
+  justify-content: flex-end;
+  padding: 0;
+}
+.cost-page01 .wrapper .item {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  color: #848484;
+  font-size: 12px;
+}
+.cost-page01 .wrapper .item label {
+  padding-left: 15px;
+}
+.cost-page01 .wrapper .cost-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.cost-page01 .wrapper .cost-info .row {
+  padding: 5px 15px;
+  border-top: 1px solid #848484;
+  border-bottom: 1px solid #848484;
+  font-size: 12px;
+}
+.cost-page01 .wrapper .cost-info .row.content {
+  overflow: auto;
+  flex: 1;
+  border: none;
+}
+.cost-page01 .wrapper .cost-info .row .item {
+  margin: 0;
+  color: #000;
+}
+.cost-page01 .wrapper .cost-info .row .item label {
+  padding: 0;
+}
+
+.points-page {
+  display: none;
+}
+.points-page .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.points-page .container {
+  height: initial;
+}
+.points-page .container .details {
+  border-bottom: 1px solid #f2f2f2;
+}
+.points-page .container .item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 12px;
+}
+.points-page .container .item.title {
+  border-bottom: 1px solid #f2f2f2;
+  color: #563fad;
+  font-size: 18px;
+  font-weight: bold;
+}
+.points-page .bottom {
+  height: initial;
+}
+
+.points-page01 {
+  display: none;
+  padding: 0;
+}
+.points-page01 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.points-page01 .wrapper hr {
+  width: 90%;
+  border: 2px solid #f2f2f2;
+  margin: 0 auto;
+}
+.points-page01 .wrapper .title {
+  padding: 0 20px;
+}
+.points-page01 .wrapper .container {
+  flex: 1;
+  padding: 10px 20px;
+  overflow: auto;
+}
+.points-page01 .wrapper .container > div + div {
+  margin-top: 10px;
+}
+.points-page01 .wrapper .container .record {
+  padding: 10px;
+  font-size: 14px;
+}
+.points-page01 .wrapper .container .record > div + div {
+  margin-top: 10px;
+}
+.points-page01 .wrapper .container .give-point {
+  background: #aedce3;
+}
+.points-page01 .wrapper .container .use-point {
+  background: #9db7d4;
+}
+.points-page01 .wrapper .bottom {
+  height: initial;
+}
+.points-page01 .wrapper .bottom .button-group {
+  padding-bottom: 25px;
+}
+
+.points-page02 {
+  display: none;
+  color: #848484;
+}
+.points-page02 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.points-page02 .container {
+  margin-top: 10px;
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.points-page02 .container .choice {
+  width: 100%;
+  font-size: 15px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.678);
+  flex: 1;
+  padding-top: 15px;
 }
 
 .apply-page {
@@ -304,31 +555,6 @@ footer .qrcode {
   flex: 1;
   padding-top: 15px;
 }
-.network-page .bottom {
-  display: flex;
-  flex-direction: column;
-  height: 200px;
-}
-.network-page .bottom .button-group {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 20px;
-}
-.network-page .bottom .button-group > button + button {
-  margin-left: 20px;
-}
-.network-page .bottom .description {
-  padding: 0 26px;
-}
-.network-page .bottom .description ul {
-  padding-left: 18px;
-  line-height: 22px;
-  margin: 0;
-}
-.network-page .bottom .description ul li {
-  font-size: 12px;
-  color: #848484;
-}
 
 .network-page01 {
   display: none;
@@ -352,31 +578,6 @@ footer .qrcode {
 }
 .network-page01 .container > p {
   line-height: 20px;
-}
-.network-page01 .bottom {
-  display: flex;
-  flex-direction: column;
-  height: 200px;
-}
-.network-page01 .bottom .button-group {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 20px;
-}
-.network-page01 .bottom .button-group > button + button {
-  margin-left: 20px;
-}
-.network-page01 .bottom .description {
-  padding: 0 26px;
-}
-.network-page01 .bottom .description ul {
-  padding-left: 18px;
-  line-height: 22px;
-  margin: 0;
-}
-.network-page01 .bottom .description ul li {
-  font-size: 12px;
-  color: #848484;
 }
 
 .clean-page {
@@ -406,29 +607,7 @@ footer .qrcode {
   line-height: 20px;
 }
 .clean-page .bottom {
-  display: flex;
-  flex-direction: column;
-  height: 200px;
-}
-.clean-page .bottom .button-group {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 20px;
-}
-.clean-page .bottom .button-group > button + button {
-  margin-left: 20px;
-}
-.clean-page .bottom .description {
-  padding: 0 26px;
-}
-.clean-page .bottom .description ul {
-  padding-left: 18px;
-  line-height: 22px;
-  margin: 0;
-}
-.clean-page .bottom .description ul li {
-  font-size: 12px;
-  color: #848484;
+  height: 150px;
 }
 
 .clean-page01 {
@@ -451,13 +630,10 @@ footer .qrcode {
   line-height: 22px;
 }
 .clean-page01 .bottom {
-  display: flex;
-  flex-direction: column;
-  height: 200px;
+  height: 150px;
 }
 .clean-page01 .bottom .button-group {
-  display: flex;
-  justify-content: center;
+  padding-bottom: 0;
 }
 
 .agent-page {
@@ -486,28 +662,7 @@ footer .qrcode {
   padding: 5px;
 }
 .agent-page .wrapper .bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   height: 125px;
-  position: relative;
-}
-.agent-page .wrapper .description {
-  width: 100%;
-  position: absolute;
-  bottom: 20px;
-}
-.agent-page .wrapper .description ul {
-  padding-top: 10px;
-  padding-left: 18px;
-  line-height: 16px;
-  margin: 0;
-  width: 100%;
-}
-.agent-page .wrapper .description ul li {
-  font-size: 12px;
-  color: #848484;
 }
 
 .agent-page01 {
@@ -528,10 +683,6 @@ footer .qrcode {
   padding-top: 20px;
 }
 .agent-page01 .wrapper .bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   height: 125px;
 }
 

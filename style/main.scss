@@ -69,6 +69,37 @@ button {
   }
 }
 
+.bottom {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+
+  .button-group {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+
+    >button+button {
+      margin-left: 20px;
+    }
+  }
+}
+
+.description {
+  padding: 0 26px;
+
+  ul {
+    padding-left: 18px;
+    line-height: 22px;
+    margin: 0;
+
+    li {
+      font-size: 12px;
+      color: $grey-color
+    }
+  }
+}
+
 .input-group {
   display: flex;
   border-bottom: 1px solid $grey-color;
@@ -201,7 +232,6 @@ footer {
 }
 
 .home-page {
-  display: none;
   width: 100%;
   height: calc(100% - 120px);
   position: relative;
@@ -242,53 +272,320 @@ footer {
   }
 }
 
-.points-page {
-  // display: none;
-  padding: 0;
+.reservation-page {
+  display: none;
+  padding: 25px;
 
-  .pignose-calendar {
-    width: 100%;
-    margin: 0;
-    max-width: inherit;
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
 
-    .pignose-calendar-top {
-      border: none;
-      box-shadow: none;
-      background: #fff;
+  .menu {
+    border: 1px solid $grey-color;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 240px;
 
-      .pignose-calendar-top-prev {
-        .pignose-calendar-top-value {
-          margin-left: 10px;
-        }
+    .image {
+      padding: 0;
+      display: block;
+      width: 100%;
+      height: 110px;
+
+      &.meeting-room {
+        background: url(../images/reservation01.jpg) center center no-repeat;
+        background-size: cover;
       }
 
-      .pignose-calendar-top-date {
+      &.gym {
+        background: url(../images/reservation02.jpg) center center no-repeat;
+        background-size: cover;
+      }
+
+      &.spa {
+        background: url(../images/reservation03.jpg) center center no-repeat;
+        background-size: cover;
+      }
+    }
+
+    >div {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+  }
+}
+
+.cost-page {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .block {
+      width: 100%;
+      flex: 1;
+
+      .header {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        color: #392f60;
-      }
-      .pignose-calendar-top-nav {
+        justify-content: space-between;
 
-
-        .pignose-calendar-top-value {
-          color: #392f60;
-          height: 100%;
+        h2 {
+          flex: 1;
         }
 
-        .pignose-calendar-top-icon {
-          color: $main-color;
+        .status {
+          font-size: 20px;
+          font-weight: bold;
+
+          &.paid {
+            color: $grey-color;
+          }
+
+          &.unpaid {
+            color: $main-color;
+          }
+        }
+      }
+
+      .item {
+        margin: 5px 0;
+        display: flex;
+        justify-content: space-between;
+        color: $grey-color;
+        font-size: 12px;
+
+        label {
+          padding-left: 15px;
+        }
+      }
+
+      .bottom {
+        height: initial;
+
+        .button-group {
+          justify-content: flex-end;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.cost-page01 {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .block {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .prompt {
+        padding: 10px 15px 25px
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+          flex: 1;
+        }
+
+        .status {
+          font-size: 20px;
+          font-weight: bold;
+
+          &.paid {
+            color: $grey-color;
+          }
+
+          &.unpaid {
+            color: $main-color;
+          }
+        }
+      }
+
+      .bottom {
+        height: 100px;
+
+        .button-group {
+          justify-content: flex-end;
+          padding: 0;
         }
       }
     }
 
-    .pignose-calendar-header {
-      background: #f2f2f2;
-      margin: 0;
-      height: 60px;
+    .item {
+      margin: 5px 0;
       display: flex;
-      align-items: center;
+      justify-content: space-between;
+      color: $grey-color;
+      font-size: 12px;
+
+      label {
+        padding-left: 15px;
+      }
+    }
+
+    .cost-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .row {
+        padding: 5px 15px;
+        border-top: 1px solid $grey-color;
+        border-bottom: 1px solid $grey-color;
+        font-size: 12px;
+
+        &.content {
+          overflow: auto;
+          flex: 1;
+          border: none
+        }
+
+        .item {
+          margin: 0;
+          color: #000;
+
+          label {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.points-page {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .container {
+    height: initial;
+
+    .details {
+      border-bottom: 1px solid #f2f2f2;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      font-size: 12px;
+
+      &.title {
+        border-bottom: 1px solid #f2f2f2;
+        color: #563fad;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .bottom {
+    height: initial;
+  }
+}
+
+.points-page01 {
+  display: none;
+  padding: 0;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    hr {
+      width: 90%;
+      border: 2px solid #f2f2f2;
+      margin: 0 auto;
+    }
+
+    .title {
+      padding: 0 20px;
+    }
+
+    .container {
+      flex: 1;
+      padding: 10px 20px;
+      overflow: auto;
+
+      >div+div {
+        margin-top: 10px;
+      }
+
+      .record {
+        padding: 10px;
+        font-size: 14px;
+
+        >div+div {
+          margin-top: 10px;
+        }
+      }
+
+      .give-point {
+        background: #aedce3;
+      }
+
+      .use-point {
+        background: #9db7d4;
+      }
+    }
+
+    .bottom {
+      height: initial;
+
+      .button-group {
+        padding-bottom: 25px;
+      }
+    }
+  }
+}
+
+.points-page02 {
+  display: none;
+  color: $grey-color;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .container {
+    margin-top: 10px;
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .choice {
+      width: 100%;
+      font-size: 15px;
+      line-height: 30px;
+      color: rgba(0, 0, 0, 0.678);
+      flex: 1;
+      padding-top: 15px;
     }
   }
 }
@@ -359,37 +656,6 @@ footer {
       padding-top: 15px;
     }
   }
-
-  .bottom {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-
-    .button-group {
-      display: flex;
-      justify-content: center;
-      padding-bottom: 20px;
-
-      >button+button {
-        margin-left: 20px;
-      }
-    }
-
-    .description {
-      padding: 0 26px;
-
-      ul {
-        padding-left: 18px;
-        line-height: 22px;
-        margin: 0;
-
-        li {
-          font-size: 12px;
-          color: $grey-color
-        }
-      }
-    }
-  }
 }
 
 .network-page01 {
@@ -416,37 +682,6 @@ footer {
 
     >p {
       line-height: 20px;
-    }
-  }
-
-  .bottom {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-
-    .button-group {
-      display: flex;
-      justify-content: center;
-      padding-bottom: 20px;
-
-      >button+button {
-        margin-left: 20px;
-      }
-    }
-
-    .description {
-      padding: 0 26px;
-
-      ul {
-        padding-left: 18px;
-        line-height: 22px;
-        margin: 0;
-
-        li {
-          font-size: 12px;
-          color: $grey-color
-        }
-      }
     }
   }
 }
@@ -482,34 +717,7 @@ footer {
   }
 
   .bottom {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-
-    .button-group {
-      display: flex;
-      justify-content: center;
-      padding-bottom: 20px;
-
-      >button+button {
-        margin-left: 20px;
-      }
-    }
-
-    .description {
-      padding: 0 26px;
-
-      ul {
-        padding-left: 18px;
-        line-height: 22px;
-        margin: 0;
-
-        li {
-          font-size: 12px;
-          color: $grey-color
-        }
-      }
-    }
+    height: 150px;
   }
 }
 
@@ -536,13 +744,10 @@ footer {
   }
 
   .bottom {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
+    height: 150px;
 
     .button-group {
-      display: flex;
-      justify-content: center;
+      padding-bottom: 0;
     }
   }
 }
@@ -576,31 +781,7 @@ footer {
     }
 
     .bottom {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
       height: 125px;
-      position: relative;
-    }
-
-    .description {
-      width: 100%;
-      position: absolute;
-      bottom: 20px;
-
-      ul {
-        padding-top: 10px;
-        padding-left: 18px;
-        line-height: 16px;
-        margin: 0;
-        width: 100%;
-
-        li {
-          font-size: 12px;
-          color: $grey-color
-        }
-      }
     }
   }
 }
@@ -625,10 +806,6 @@ footer {
     }
 
     .bottom {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
       height: 125px;
     }
   }

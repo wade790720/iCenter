@@ -360,6 +360,54 @@ footer .qrcode {
   height: 100px;
 }
 
+.reservation-page02 {
+  display: none;
+  color: #848484;
+}
+.reservation-page02 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.reservation-page02 .back-section .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reservation-page02 .container {
+  margin-top: 10px;
+  position: relative;
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.reservation-page02 .container .choice {
+  width: 100%;
+  font-size: 15px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.678);
+  flex: 1;
+}
+.reservation-page02 .container .choice > div + div {
+  margin-top: 20px;
+}
+.reservation-page02 .container .input-field {
+  display: flex;
+  align-items: center;
+}
+.reservation-page02 .container .input-field img {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+.reservation-page02 .container .input-field input {
+  flex: 1;
+}
+.reservation-page02 .bottom {
+  height: initial;
+}
+
 .cost-page {
   display: none;
 }

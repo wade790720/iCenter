@@ -9,6 +9,7 @@ var apply = $(".home-page .apply");
 var homePage = $('.home-page')
 var reservationPage = $('.reservation-page')
 var reservationPage01 = $('.reservation-page01')
+var reservationPage02 = $('.reservation-page02')
 var costPage = $('.cost-page')
 var costPage01 = $('.cost-page01')
 var pointsPage = $('.points-page')
@@ -54,13 +55,51 @@ apply.on("click", () => {
 // 預約頁
 reservationPage.find('.meeting-room').on('click', () => {
     reservationPage.hide();
+    reservationPage01.show();
+    reservationPage01.find('h2').text('會議空間預約');
+    reservationPage01.addClass('meeting-room')
+})
+
+reservationPage.find('.gym').on('click', () => {
+    reservationPage.hide();
     reservationPage01.show()
+    reservationPage01.find('h2').text('健身房預約');
+    reservationPage01.addClass('gym')
+})
+
+reservationPage.find('.spa').on('click', () => {
+    reservationPage.hide();
+    reservationPage01.show()
+    reservationPage01.find('h2').text('SPA預約');
+    reservationPage01.addClass('spa')
 })
 
 reservationPage01.find('.back-section .fa-chevron-left').on('click', () => {
     reservationPage01.hide();
     reservationPage.show();
+    reservationPage01.removeClass('meeting-room').removeClass('gym').removeClass('spa')
 })
+
+reservationPage01.find('.join').on('click', () => {
+    reservationPage01.hide();
+    reservationPage02.show();
+    if (reservationPage01.hasClass('meeting-room')) {
+        reservationPage02.find('.input-field').show();
+    } else {
+        reservationPage02.find('.input-field').hide();
+    }
+})
+
+reservationPage02.find('.back-section .fa-chevron-left').on('click', () => {
+    reservationPage02.hide();
+    reservationPage01.show();
+})
+
+reservationPage02.find('.back').on('click', () => {
+    reservationPage02.hide();
+    reservationPage01.show();
+})
+
 
 // 費用頁
 costPage.find('.details').on('click', () => {

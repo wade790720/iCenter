@@ -426,6 +426,65 @@ footer {
   }
 }
 
+.reservation-page02 {
+  display: none;
+  color: $grey-color;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .back-section {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .container {
+    margin-top: 10px;
+    position: relative;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    .choice {
+      width: 100%;
+      font-size: 15px;
+      line-height: 30px;
+      color: rgba(0, 0, 0, 0.678);
+      flex: 1;
+
+      >div+div {
+        margin-top: 20px;
+      }
+    }
+
+    .input-field {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+      }
+
+      input {
+        flex: 1;
+      }
+    }
+  }
+
+  .bottom {
+    height: initial;
+  }
+}
+
 .cost-page {
   display: none;
 

@@ -8,6 +8,7 @@ var apply = $(".home-page .apply");
 var homePage = $('.home-page')
 var pointsPage = $('.points-page')
 var pointsPage01 = $('.points-page01')
+var pointsPage02 = $('.points-page02')
 var applyPage = $('.apply-page')
 var recruitPage = $('.recruit-page')
 var recruitPage01 = $('.recruit-page01')
@@ -36,9 +37,19 @@ apply.on("click", () => {
 });
 
 // 點數頁
+pointsPage.find('.buy').on('click', () => {
+    pointsPage.hide();
+    pointsPage02.show()
+})
+
 pointsPage.find('.record').on('click', () => {
     pointsPage.hide();
     pointsPage01.show()
+})
+
+pointsPage01.find('.buy').on('click', () => {
+    pointsPage01.hide();
+    pointsPage02.show()
 })
 
 pointsPage01.find('.back').on('click', () => {

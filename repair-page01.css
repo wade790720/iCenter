@@ -1,0 +1,24 @@
+.repair-page01 {
+  display: none;
+}
+.repair-page01 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.repair-page01 .wrapper .container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.repair-page01 .wrapper .container > div {
+  font-size: 14px;
+  padding-top: 20px;
+}
+.repair-page01 .wrapper .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 125px;
+}

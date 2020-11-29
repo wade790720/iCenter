@@ -4,10 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>iCenter</title>
   <link rel="stylesheet" href="./style/normalize.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css" />
   <link rel="stylesheet" type="text/css" href="./style/pignose.calendar.css" />
+  <link rel="stylesheet" type="text/css" href="./style/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./style/slick-theme.css" />
   <link rel="stylesheet" href="./style/main.css" />
 </head>
 
@@ -58,19 +60,245 @@
   <!-- 預約頁 -->
   <div class="page reservation-page">
     <div class="menu-list">
-    <div class="menu">
-      <div class="image meeting-room"></div>
-      <div>會議室預約</div>
-    </div>
-    <div class="menu">
-      <div class="image gym"></div>
-      <div>健身休閒預約</div>
-    </div>
-    <div class="menu">
-      <div class="image spa"></div>
-      <div>SPA預約</div>
+      <div class="menu">
+        <div class="image meeting-room"></div>
+        <div>會議室預約</div>
+      </div>
+      <div class="menu">
+        <div class="image gym"></div>
+        <div>健身休閒預約</div>
+      </div>
+      <div class="menu">
+        <div class="image spa"></div>
+        <div>SPA預約</div>
+      </div>
     </div>
   </div>
+
+  <!-- 預約頁 - 收尋 -->
+  <div class="page reservation-page01">
+    <div class="wrapper">
+      <div class="back-section">
+        <div class="header">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+      </div>
+      <h2>會議空間預約</h2>
+      <div class="container">
+        <div class="input-field date">
+          <input placeholder="會議日期" type="text" onfocus="(this.type='date')">
+        </div>
+        <div class="input-field time">
+          <input placeholder="開始時間" type="text" onfocus="(this.type='time')">
+        </div>
+        <div class="input-field time">
+          <input placeholder="結束時間" type="text" onfocus="(this.type='time')">
+        </div>
+        <div class="input-field join">
+          <input type="text" placeholder="參加人數">
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button class="search">查看</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 預約頁 - 邀請人員 -->
+  <div class="page reservation-page02">
+    <div class="wrapper">
+      <div class="back-section">
+        <div class="header">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+      </div>
+      <h2>邀請</h2>
+      <div class="container">
+        <div class="choice">
+          <div class="checkbox">
+            <input type="checkbox" value="15mb">
+            <span>Bryce</span>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" value="15mb">
+            <span>Marry</span>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" value="15mb">
+            <span>James</span>
+          </div>
+          <div class="input-field">
+            <img src="./images/plus-circle.png" alt="plus-circle">
+            <input placeholder="email" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button class="submit">確定邀請</button>
+          <button class="back">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 預約頁 - 收尋結果/會議室 -->
+  <div class="page reservation-page03 meeting-room">
+    <div class="wrapper">
+      <div class="back-section">
+        <div class="header">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+      </div>
+      <h2>會議室預約</h2>
+      <div class="container">
+        <p>日期：2020年10月20日</p>
+        <p>時間：09:00 - 10:00</p>
+        <div class="title">選擇你要預約的會議室</div>
+        <div class="block">
+          <div class="header">
+            <div class="input-field">
+              <input type="radio" id="21A" name="room" value="21A">
+              <label for="21A">21樓 Room i21A (10人)</label>
+            </div>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="content">
+            <div>‧ 10 seats ‧ TV ‧ Whiteboard ‧ Blinds</div>
+            <div>點數：2</div>
+            <div class="single-item">
+              <div>
+                <img src="./images/reservation01.jpg" style="width: 100%;">
+              </div>
+              <div>
+                <img src="./images/reservation01.jpg" style="width: 100%;">
+              </div>
+              <div>
+                <img src="./images/reservation01.jpg" style="width: 100%;">
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            空間行事曆
+          </div>
+        </div>
+        <div class="block">
+          <div class="header">
+            <div class="input-field">
+              <input type="radio" id="22A" name="room" value="22A">
+              <label for="22A">22樓 Room i22A (10人)</label>
+            </div>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="content">
+            <div>‧ 10 seats ‧ TV ‧ Whiteboard ‧ Blinds</div>
+            <div>點數：2</div>
+            <div class="single-item">
+              <div>
+                <img src="./images/reservation01.jpg" style="width: 100%;">
+              </div>
+              <div>
+                <img src="./images/reservation01.jpg" style="width: 100%;">
+              </div>
+              <div>
+                <img src="./images/reservation01.jpg" style="width: 100%;">
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            空間行事曆
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button class="submit">預約</button>
+          <button class="back">重新選擇</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 預約頁 - 收尋結果/健身房 -->
+  <div class="page reservation-page03 gym">
+    <div class="wrapper">
+      <div class="back-section">
+        <div class="header">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+      </div>
+      <h2>健身房預約</h2>
+      <div class="container">
+        <p>日期：2020年10月20日</p>
+        <p>時間：09:00 - 10:00</p>
+        <div class="block open other">
+          <div class="content">
+            <div>GYM</div>
+            <div>點數：2</div>
+            <div class="single-item">
+              <div>
+                <img src="./images/reservation02.jpg" style="width: 100%;">
+              </div>
+              <div>
+                <img src="./images/reservation02.jpg" style="width: 100%;">
+              </div>
+              <div>
+                <img src="./images/reservation02.jpg" style="width: 100%;">
+              </div>
+            </div>
+          </div>
+          <div class="footer">空間行事曆</div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button class="submit">預約</button>
+          <button class="back">重新選擇</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 預約頁 - 收尋結果/SPA -->
+  <div class="page reservation-page03 spa">
+    <div class="wrapper">
+      <div class="back-section">
+        <div class="header">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+      </div>
+      <h2>SPA預約</h2>
+      <div class="container">
+        <p>日期：2020年10月20日</p>
+        <p>時間：09:00 - 10:00</p>
+        <div class="block open other">
+          <div class="content">
+            <div>SPA ‧ 蒸氣室 ‧ 烤箱</div>
+            <div>點數：2</div>
+            <div class="single-item">
+              <div>
+                <img src="./images/reservation03.jpg" style="width: 100%;">
+              </div>
+              <div>
+                <img src="./images/reservation03.jpg" style="width: 100%;">
+              </div>
+              <div>
+                <img src="./images/reservation03.jpg" style="width: 100%;">
+              </div>
+            </div>
+          </div>
+          <div class="footer">空間行事曆</div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button class="submit">預約</button>
+          <button class="back">重新選擇</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- 費用頁 -->
@@ -511,6 +739,58 @@
     </div>
   </div>
 
+  <!-- 申請頁 - 修繕 -->
+  <div class="page repair-page">
+    <div class="wrapper">
+      <div class="back-section"></div>
+      <h2>修繕申請</h2>
+      <div class="container">
+        <div>免費修繕項目</div>
+        <div>iStudio,iWork Delicate,iWork Basic之會員可申請以下之免費修繕</div>
+        <div>(在非人為造成之損壞狀況下)：</div>
+        <ul>
+          <li>燈管故障更換</li>
+          <li>電子門鎖故障修理或電池更換</li>
+          <li>插座故障修理</li>
+        </ul>
+        <br />
+        <div>收費修繕申請</div>
+        <div>將依申請之修繕狀況，提供收費修繕服務。</div>
+        <textarea name="" id="" cols="20" rows="5" placeholder="請說明，您欲修繕的物件及狀況："></textarea>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button class="submit">確定</button>
+        </div>
+        <div class="description">
+          <ul>
+            <li>申請後，將由專人與您接洽。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 申請頁 - 修繕/確認頁 -->
+  <div class="page repair-page01">
+    <div class="wrapper">
+      <div class="back-section"></div>
+      <h2>修繕申請</h2>
+      <div class="container">
+        <div class="text-area">
+          <div>您已經申請了</div>
+          <div>修繕服務</div>
+          <div>將由專人與您聯繫，為您服務。</div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button>確定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- 申請頁 - 商務代辦 -->
   <div class="page agent-page">
     <div class="wrapper">
@@ -692,8 +972,9 @@
     <img class="qrcode" src="./images/qrcode.png" alt="qrcode" />
   </footer>
 </body>
-<script src="./js/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="./js/jquery-3.5.1.js"></script>
 <script type="text/javascript" src="./js/pignose.calendar.full.js"></script>
-<script src="./js/script.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="./js/script.js"></script>
 
 </html>

@@ -10,6 +10,9 @@ var homePage = $('.home-page')
 var reservationPage = $('.reservation-page')
 var reservationPage01 = $('.reservation-page01')
 var reservationPage02 = $('.reservation-page02')
+var reservationPageMeetingRoom = $('.reservation-page03.meeting-room')
+var reservationPageGym = $('.reservation-page03.gym')
+var reservationPageSpa = $('.reservation-page03.spa')
 var costPage = $('.cost-page')
 var costPage01 = $('.cost-page01')
 var pointsPage = $('.points-page')
@@ -31,7 +34,8 @@ var cleanPage01 = $('.clean-page01')
 
 tabHome.on("click", () => {
     homePage.show();
-    $('.page').hide()
+    $('.page').hide();
+    reservationPage01.removeClass('meeting-room').removeClass('gym').removeClass('spa');
 })
 
 reservation.on("click", () => {
@@ -92,6 +96,22 @@ reservationPage01.find('.join').on('click', () => {
     }
 })
 
+reservationPage01.find('.search').on('click', () => {
+    reservationPage01.hide();
+
+    if (reservationPage01.hasClass('meeting-room')) {
+        reservationPageMeetingRoom.show();
+    }
+    if (reservationPage01.hasClass('gym')) {
+        reservationPageGym.show();
+        reservationPageGym.find('.single-item').get(0).slick.setPosition()
+    }
+    if (reservationPage01.hasClass('spa')) {
+        reservationPageSpa.show();
+        reservationPageSpa.find('.single-item').get(0).slick.setPosition()
+    }
+})
+
 reservationPage02.find('.back-section .fa-chevron-left').on('click', () => {
     reservationPage02.hide();
     reservationPage01.show();
@@ -102,6 +122,45 @@ reservationPage02.find('.back').on('click', () => {
     reservationPage01.show();
 })
 
+reservationPageMeetingRoom.find('.back-section .fa-chevron-left').on('click', () => {
+    reservationPageMeetingRoom.hide();
+    reservationPage01.show();
+})
+
+reservationPageGym.find('.back-section .fa-chevron-left').on('click', () => {
+    reservationPageGym.hide();
+    reservationPage01.show();
+})
+
+reservationPageSpa.find('.back-section .fa-chevron-left').on('click', () => {
+    reservationPageSpa.hide();
+    reservationPage01.show();
+})
+
+var blockList = reservationPageMeetingRoom.find('.container .block')
+
+blockList.map(function () {
+    var block = $(this)
+
+    block.find('.header .fas').on('click', function () {
+        if ($(this).hasClass('fa-chevron-down')) {
+            $(this).removeClass('fa-chevron-down').addClass('fa-chevron-up');
+            block.addClass('open')
+            reservationPageMeetingRoom.find('.single-item').get(0).slick.setPosition()
+        } else {
+            $(this).removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            block.removeClass('open')
+        }
+    })
+})
+
+$(function () {
+    $('.single-item').slick({
+        autoplay: true,
+        dots: true,
+        infinite: true,
+    });
+})
 
 // 費用頁
 costPage.find('.details').on('click', () => {

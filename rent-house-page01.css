@@ -1,0 +1,23 @@
+.rent-house-page01 {
+  display: none;
+}
+.rent-house-page01 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.rent-house-page01 .container {
+  margin-top: 10px;
+  position: relative;
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.rent-house-page01 .container > div {
+  font-size: 14px;
+  padding-top: 20px;
+}
+.rent-house-page01 .bottom {
+  height: 100px;
+}

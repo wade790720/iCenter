@@ -1,0 +1,36 @@
+.rent-house-page {
+  display: none;
+  color: #848484;
+}
+.rent-house-page .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.rent-house-page .back-section .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rent-house-page .container {
+  margin-top: 10px;
+  position: relative;
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.rent-house-page .container .choice {
+  width: 100%;
+  font-size: 15px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.678);
+  flex: 1;
+  padding-top: 15px;
+}
+.rent-house-page .container .choice .checkbox > div {
+  margin-left: 25px;
+}
+.rent-house-page .bottom {
+  height: 100px;
+}

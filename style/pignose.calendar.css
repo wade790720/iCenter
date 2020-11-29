@@ -146,11 +146,10 @@
 
 .pignose-calendar .pignose-calendar-top .pignose-calendar-top-year {
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.5);
+  color: #2f2260;
 }
 
 .pignose-calendar .pignose-calendar-top .pignose-calendar-top-month {
-  margin-bottom: 0.4em;
   font-size: 130%;
   font-weight: 600;
 }
@@ -165,7 +164,7 @@
 
 .pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-value {
   display: inline-block;
-  color: #777777;
+  color: #2f2260;
   font-size: 115%;
   font-weight: 600;
   vertical-align: middle;
@@ -529,5 +528,5 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #392f60;
+  color: #2f2260;
 }

@@ -22,6 +22,8 @@ var recruitPage02 = $('.recruit-page02')
 var recruitPage03 = $('.recruit-page03')
 var networkPage = $('.network-page')
 var networkPage01 = $('.network-page01')
+var repairPage = $('.repair-page')
+var repairPage01 = $('.repair-page01')
 var agentPage = $('.agent-page')
 var agentPage01 = $('.agent-page01')
 var cleanPage = $('.clean-page')
@@ -164,6 +166,7 @@ $(function () {
 // 申請頁 - 選單
 var network = $('.apply-page .menu .network')
 var clean = $('.apply-page .menu .clean')
+var repair = $('.apply-page .menu .repair')
 var agent = $('.apply-page .menu .agent')
 var recruit = $('.apply-page .menu .recruit')
 
@@ -175,6 +178,11 @@ network.on('click', () => {
 clean.on('click', () => {
     applyPage.hide();
     cleanPage.show();
+})
+
+repair.on('click', () => {
+    applyPage.hide();
+    repairPage.show();
 })
 
 agent.on('click', () => {
@@ -212,6 +220,12 @@ networkPage01.find('.back').on('click', () => {
 cleanPage.find('.submit').on('click', () => {
     cleanPage.hide();
     cleanPage01.show()
+})
+
+// 申請頁 - 修繕
+repairPage.find('.submit').on('click', () => {
+    repairPage.hide();
+    repairPage01.show()
 })
 
 // 申請頁 - 商務代辦

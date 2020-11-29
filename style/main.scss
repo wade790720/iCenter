@@ -1,6 +1,7 @@
 $main-color: #20b6c4;
 $grey-color: #848484;
 $light-grey-color: #f2f2f2;
+$purple-color: #2f2260;
 
 html,
 body {
@@ -10,7 +11,7 @@ body {
 }
 
 h2 {
-  color: #5242a2;
+  color: $purple-color;
   border-left: 5px solid $main-color;
   padding-left: 10px;
   font-size: 20px;
@@ -659,7 +660,7 @@ footer {
 
       &.title {
         border-bottom: 1px solid $light-grey-color;
-        color: #563fad;
+        color: $purple-color;
         font-size: 18px;
         font-weight: bold;
       }
@@ -702,6 +703,7 @@ footer {
       .record {
         padding: 10px;
         font-size: 14px;
+        color: $purple-color;
 
         >div+div {
           margin-top: 10px;
@@ -913,6 +915,68 @@ footer {
 
     .button-group {
       padding-bottom: 0;
+    }
+  }
+}
+
+.repair-page {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      >div,
+      ul {
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0;
+      }
+
+      textarea {
+        width: 100%;
+        height: 100%;
+        border-color: $grey-color;
+        border-radius: 5px;
+        margin-top: 20px;
+        padding: 5px;
+        font-size: 14px;
+      }
+    }
+
+    .bottom {
+      height: 100px;
+    }
+  }
+}
+
+.repair-page01 {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      >div {
+        font-size: 14px;
+        padding-top: 20px;
+      }
+    }
+
+    .bottom {
+      height: 125px;
     }
   }
 }

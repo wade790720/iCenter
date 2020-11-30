@@ -7,18 +7,21 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: "Microsoft JhengHei", serif;
+  font-family: "Arial", "黑體", "微軟正黑體", sans-serif;
 }
 
 h2 {
   color: $purple-color;
   border-left: 5px solid $main-color;
   padding-left: 10px;
-  font-size: 20px;
+  font-size: 14px;
   margin: 0;
   width: 100%;
-  height: 24px;
+  height: 20px;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 p {
@@ -604,6 +607,139 @@ footer {
 
   .bottom {
     height: initial;
+  }
+}
+
+.reservation-page04 {
+  font-size: 13px;
+  color: #8e8e8e;
+  
+  .schedules {
+    position: relative;
+    display: flex;
+    height: 100%;
+    border: 1px solid #d2d2d2;
+    margin: 10px 0 30px;
+
+    .prev, .next {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      color: #20b6c4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      top: 8px;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    .prev {
+      left: 3px;
+    }
+
+    .next {
+      right: 3px;
+    }
+
+    .schedule {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+  
+      & + .schedule {
+        border-left: 1px solid #d2d2d2;
+      }
+
+      > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px;
+        flex: 1 1;
+  
+        & + div {
+          border-top: 1px solid #d2d2d2;
+        }
+
+        &.open {
+          background-color: #fff;
+        }
+
+        &.close {
+          background-color: #eee;
+        }
+
+        &.blocked {
+          color: #b22829;
+          background-color: currentColor;
+
+          & + .blocked {
+            border-top: 1px solid currentColor;
+          }
+        }
+
+        &.selected {
+          color: #20b6c4;
+          background-color: currentColor;
+
+          & + .selected {
+            border-top: 1px solid currentColor;
+          }
+        }
+      }
+  
+      .date {
+        padding: 12px 4px;
+        flex: 1 1;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 20px;
+    padding: 0;
+    font-size: 12px;
+    line-height: 14px;
+
+    > div {
+      display: flex;
+      align-items: center;
+
+      & + div {
+        margin-left: 3px;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 14px;
+        height: 14px;
+        margin-right: 3px;
+      }
+
+      &.open:before {
+        border: 1px solid #d2d2d2;
+        background-color: #fff;
+      }
+
+      &.close:before {
+        background-color: #eee;
+      }
+
+      &.blocked:before {
+        background-color: #b22829;
+      }
+
+      &.selected:before {
+        background-color: #20b6c4;
+      }
+    }
   }
 }
 

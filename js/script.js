@@ -13,6 +13,7 @@ var reservationPage02 = $('.reservation-page02')
 var reservationPageMeetingRoom = $('.reservation-page03.meeting-room')
 var reservationPageGym = $('.reservation-page03.gym')
 var reservationPageSpa = $('.reservation-page03.spa')
+var reservationPage04MeetingRoom = $('.reservation-page04.meeting-room')
 var costPage = $('.cost-page')
 var costPage01 = $('.cost-page01')
 var pointsPage = $('.points-page')
@@ -125,6 +126,11 @@ reservationPage02.find('.back').on('click', () => {
 reservationPageMeetingRoom.find('.back-section .fa-chevron-left').on('click', () => {
     reservationPageMeetingRoom.hide();
     reservationPage01.show();
+})
+
+reservationPageMeetingRoom.find('.submit').on('click', () => {
+    reservationPageMeetingRoom.hide();
+    reservationPage04MeetingRoom.show();
 })
 
 reservationPageGym.find('.back-section .fa-chevron-left').on('click', () => {
@@ -360,3 +366,6 @@ noButton.on('click', () => {
     recruitPage.show();
     recruitPage03.hide();
 })
+
+// homePage.hide();
+// reservationPage04MeetingRoom.show();

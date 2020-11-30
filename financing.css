@@ -1,0 +1,28 @@
+.financing-page {
+  display: none;
+}
+.financing-page .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.financing-page .wrapper .container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.financing-page .wrapper .container > div {
+  font-size: 14px;
+  padding-top: 20px;
+  line-height: 1;
+}
+.financing-page .wrapper .container textarea {
+  width: 100%;
+  border-color: #848484;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 5px;
+}
+.financing-page .wrapper .bottom {
+  height: 125px;
+}

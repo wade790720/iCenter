@@ -32,6 +32,13 @@ var agentPage = $('.agent-page')
 var agentPage01 = $('.agent-page01')
 var cleanPage = $('.clean-page')
 var cleanPage01 = $('.clean-page01')
+var rentHousePage = $('.rent-house-page')
+var rentHousePage01 = $('.rent-house-page01')
+var financingPage = $('.financing-page')
+var financingPage01 = $('.financing-page01')
+var insurancePage = $('.insurance-page')
+var insurancePage01 = $('.insurance-page01')
+
 
 tabHome.on("click", () => {
     homePage.show();
@@ -234,6 +241,9 @@ var clean = $('.apply-page .menu .clean')
 var repair = $('.apply-page .menu .repair')
 var agent = $('.apply-page .menu .agent')
 var recruit = $('.apply-page .menu .recruit')
+var rentHouse = $('.apply-page .menu .rent-house')
+var financing = $('.apply-page .menu .financing')
+var insurance = $('.apply-page .menu .insurance')
 
 network.on('click', () => {
     applyPage.hide();
@@ -258,6 +268,21 @@ agent.on('click', () => {
 recruit.on('click', () => {
     applyPage.hide();
     recruitPage.show();
+})
+
+rentHouse.on('click', () => {
+    applyPage.hide();
+    rentHousePage.show();
+})
+
+financing.on('click', () => {
+    applyPage.hide();
+    financingPage.show();
+})
+
+insurance.on('click', () => {
+    applyPage.hide();
+    insurancePage.show();
 })
 
 // 申請頁 - 寬帶網路
@@ -367,5 +392,19 @@ noButton.on('click', () => {
     recruitPage03.hide();
 })
 
-// homePage.hide();
-// reservationPage04MeetingRoom.show();
+// 申請頁 - 租屋
+rentHousePage.find('.submit').on('click', () => {
+    rentHousePage.hide();
+    rentHousePage01.show();
+})
+
+// 申請頁 - 資金融通
+financingPage.find('.submit').on('click', () => {
+    financingPage.hide();
+    financingPage01.show();
+})
+
+insurancePage.find('.submit').on('click', () => {
+    insurancePage.hide();
+    insurancePage01.show();
+})

@@ -611,9 +611,10 @@ footer {
 }
 
 .reservation-page04 {
+  display: none;
   font-size: 13px;
   color: #8e8e8e;
-  
+
   .schedules {
     position: relative;
     display: flex;
@@ -621,7 +622,8 @@ footer {
     border: 1px solid #d2d2d2;
     margin: 10px 0 30px;
 
-    .prev, .next {
+    .prev,
+    .next {
       position: absolute;
       width: 20px;
       height: 20px;
@@ -647,19 +649,19 @@ footer {
       display: flex;
       flex-direction: column;
       flex: 1;
-  
-      & + .schedule {
+
+      &+.schedule {
         border-left: 1px solid #d2d2d2;
       }
 
-      > div {
+      >div {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 4px;
         flex: 1 1;
-  
-        & + div {
+
+        &+div {
           border-top: 1px solid #d2d2d2;
         }
 
@@ -675,7 +677,7 @@ footer {
           color: #b22829;
           background-color: currentColor;
 
-          & + .blocked {
+          &+.blocked {
             border-top: 1px solid currentColor;
           }
         }
@@ -684,12 +686,12 @@ footer {
           color: #20b6c4;
           background-color: currentColor;
 
-          & + .selected {
+          &+.selected {
             border-top: 1px solid currentColor;
           }
         }
       }
-  
+
       .date {
         padding: 12px 4px;
         flex: 1 1;
@@ -707,11 +709,11 @@ footer {
     font-size: 12px;
     line-height: 14px;
 
-    > div {
+    >div {
       display: flex;
       align-items: center;
 
-      & + div {
+      &+div {
         margin-left: 3px;
       }
 
@@ -1439,6 +1441,200 @@ footer {
 
     >button+button {
       margin-left: 20px;
+    }
+  }
+}
+
+.rent-house-page {
+  display: none;
+  color: $grey-color;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .back-section {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .container {
+    margin-top: 10px;
+    position: relative;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    .choice {
+      width: 100%;
+      font-size: 15px;
+      line-height: 30px;
+      color: rgba(0, 0, 0, 0.678);
+      flex: 1;
+      padding-top: 15px;
+
+      .checkbox {
+
+        >div {
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    height: 100px;
+  }
+}
+
+.rent-house-page01 {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .container {
+    margin-top: 10px;
+    position: relative;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    >div {
+      font-size: 14px;
+      padding-top: 20px;
+    }
+  }
+
+  .bottom {
+    height: 100px;
+  }
+}
+
+.financing-page {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      >div {
+        font-size: 14px;
+        padding-top: 20px;
+        line-height: 1;
+      }
+
+      textarea {
+        width: 100%;
+        border-color: $grey-color;
+        border-radius: 5px;
+        margin-top: 20px;
+        padding: 5px;
+      }
+    }
+
+    .bottom {
+      height: 125px;
+    }
+  }
+}
+
+.financing-page01 {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      >div {
+        font-size: 14px;
+        padding-top: 20px;
+      }
+    }
+
+    .bottom {
+      height: 125px;
+    }
+  }
+}
+
+.insurance-page {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      >div {
+        font-size: 14px;
+        padding-top: 20px;
+        line-height: 1;
+      }
+
+      textarea {
+        width: 100%;
+        border-color: $grey-color;
+        border-radius: 5px;
+        margin-top: 20px;
+        padding: 5px;
+      }
+    }
+
+    .bottom {
+      height: 125px;
+    }
+  }
+}
+
+.insurance-page01 {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      >div {
+        font-size: 14px;
+        padding-top: 20px;
+      }
+    }
+
+    .bottom {
+      height: 125px;
     }
   }
 }

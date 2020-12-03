@@ -931,22 +931,17 @@ footer .qrcode {
   height: 100%;
 }
 .clean-page .container {
-  margin-top: 10px;
-  position: relative;
-  flex: 1;
-  overflow: auto;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
-.clean-page .container ul {
-  padding-left: 18px;
-  padding-bottom: 20px;
+.clean-page .container > div, .clean-page .container ul {
+  font-size: 14px;
   line-height: 22px;
   margin: 0;
 }
-.clean-page .container > p {
-  padding-bottom: 20px;
-  line-height: 20px;
+.clean-page .container > div {
+  margin-top: 10px;
 }
 .clean-page .bottom {
   height: 150px;
@@ -961,15 +956,13 @@ footer .qrcode {
   height: 100%;
 }
 .clean-page01 .container {
-  margin-top: 10px;
-  position: relative;
-  flex: 1;
-  overflow: auto;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 .clean-page01 .container > div {
-  line-height: 22px;
+  font-size: 14px;
+  padding-top: 20px;
 }
 .clean-page01 .bottom {
   height: 150px;

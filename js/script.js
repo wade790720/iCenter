@@ -137,7 +137,7 @@ reservationPageMeetingRoom.find('.back-section .fa-chevron-left').on('click', ()
 
 reservationPageMeetingRoom.find('.submit').on('click', () => {
     reservationPageMeetingRoom.hide();
-    reservationPage04MeetingRoom.show();
+    initReservationPage04MeetingRoom();
 })
 
 reservationPageGym.find('.back-section .fa-chevron-left').on('click', () => {
@@ -202,6 +202,63 @@ pointsPage01.find('.back').on('click', () => {
     pointsPage.show()
 })
 
+var initReservationPage04MeetingRoom = () => {
+    var TYPE = { open: 0, close: 1, selected: 2, blocked: 3 };
+    var $schedules = reservationPage04MeetingRoom.find('.schedules')
+    var $scheduleList = $schedules.find('.schedule')
+    var mainDate = dayjs()
+
+    // 日曆重置
+    var _reset = (date) => {
+        var WEEKS = ['日', '一', '二', '三', '四', '五', '六']
+        var _mainDate = dayjs(date)
+        var _prevDate = dayjs(_mainDate).subtract(1, 'd')
+        var _nextDate = dayjs(_mainDate).add(1, 'd')
+        var schedules = {
+            [_prevDate.format('YYYY/M/D')]: Array.from({ length: 12 }).map(() => Math.floor(Math.random() * 4)),
+            [_mainDate.format('YYYY/M/D')]: Array.from({ length: 12 }).map(() => Math.floor(Math.random() * 4)),
+            [_nextDate.format('YYYY/M/D')]: Array.from({ length: 12 }).map(() => Math.floor(Math.random() * 4)),
+        }
+        $scheduleList.map((sIndex, sTarget) => {
+            var $schedule = $(sTarget)
+            var [_date, _schedule] = Object.entries(schedules)[sIndex]
+            $schedule.find('.date').text(`${_date}(${WEEKS[dayjs(_date).day()]})`)
+            $schedule.find('.button').map((bIndex, bTarget) => {
+                var $button = $(bTarget)
+                var _type = Object.keys(TYPE)[_schedule[bIndex]];
+                $button.attr('class', `button ${_type}`);
+            })
+        })
+    }
+    
+    // 日曆行為
+    var _execute = {
+        prev: () => {
+            mainDate = dayjs(mainDate).subtract(1, 'd')
+            _reset(mainDate)
+        },
+        next: () => {
+            mainDate = dayjs(mainDate).add(1, 'd')
+            _reset(mainDate)
+        },
+        open: ($target) => $target.attr('class', 'button selected'),
+        selected: ($target) => $target.attr('class', 'button open'),
+    }
+    
+    // 操作日曆
+    $schedules.not('.click').on('click', '.button', (e) => {
+        var $button = $(e.currentTarget);
+        var [dom, type] = $button.attr('class').split(' ');
+        if (dom === 'button') {
+            if (['close', 'blocked'].some(_type => _type === type)) return;
+            _execute[type]($button);
+        }
+    }).addClass('click')
+
+    reservationPage04MeetingRoom.show()
+    _reset(mainDate)
+}
+
 $(function () {
     pointsPage01.find('.calendar').pignoseCalendar({
         scheduleOptions: {
@@ -232,6 +289,9 @@ $(function () {
     pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-thu').text('T')
     pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-fri').text('F')
     pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-sat').text('S')
+
+    // init pages
+    initReservationPage04MeetingRoom();
 });
 
 

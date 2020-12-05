@@ -114,6 +114,7 @@ reservationPage01.find('.search').on('click', () => {
 
     if (reservationPage01.hasClass('meeting-room')) {
         reservationPage03MeetingRoom.show();
+        reservationPage03MeetingRoom.find('.single-item').get(0).slick.setPosition()
     }
     if (reservationPage01.hasClass('gym')) {
         reservationPage03Gym.show();
@@ -138,6 +139,11 @@ reservationPage02.find('.back').on('click', () => {
 
 // 預約頁 - 收尋結果/會議室
 reservationPage03MeetingRoom.find('.back-section .fa-chevron-left').on('click', () => {
+    reservationPage03MeetingRoom.hide();
+    reservationPage01.show();
+})
+
+reservationPage03MeetingRoom.find('.back').on('click', () => {
     reservationPage03MeetingRoom.hide();
     reservationPage01.show();
 })
@@ -170,6 +176,11 @@ reservationPage03Gym.find('.back-section .fa-chevron-left').on('click', () => {
     reservationPage01.show();
 })
 
+reservationPage03Gym.find('.back').on('click', () => {
+    reservationPage03Gym.hide();
+    reservationPage01.show();
+})
+
 reservationPage03Gym.find('.check-calendar').on('click', () => {
     reservationPage03Gym.hide();
     initReservationPage04MeetingRoom();
@@ -179,6 +190,11 @@ reservationPage03Gym.find('.check-calendar').on('click', () => {
 
 // 預約頁 - 收尋結果/SPA
 reservationPage03Spa.find('.back-section .fa-chevron-left').on('click', () => {
+    reservationPage03Spa.hide();
+    reservationPage01.show();
+})
+
+reservationPage03Spa.find('.back').on('click', () => {
     reservationPage03Spa.hide();
     reservationPage01.show();
 })

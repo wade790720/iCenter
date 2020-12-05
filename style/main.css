@@ -23,6 +23,7 @@ p {
   margin: 0;
   color: #848484;
   font-size: 14px;
+  line-height: 24px;
 }
 
 button {
@@ -82,11 +83,11 @@ button:focus {
 }
 .description ul {
   padding-left: 18px;
-  line-height: 22px;
   margin: 0;
 }
 .description ul li {
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 24px;
   color: #848484;
 }
 
@@ -253,7 +254,7 @@ footer .qrcode {
   border: 1px solid #848484;
   border-radius: 20px;
   overflow: hidden;
-  width: 240px;
+  width: 100%;
 }
 .reservation-page .menu .image {
   padding: 0;
@@ -294,7 +295,6 @@ footer .qrcode {
   align-items: center;
 }
 .reservation-page01 .container {
-  margin-top: 10px;
   position: relative;
   flex: 1;
   overflow: auto;
@@ -360,7 +360,10 @@ footer .qrcode {
   border-width: thin;
 }
 .reservation-page01 .bottom {
-  height: 100px;
+  height: 70px;
+}
+.reservation-page01 .bottom .button-group {
+  padding-top: 15px;
 }
 
 .reservation-page02 {
@@ -408,7 +411,10 @@ footer .qrcode {
   flex: 1;
 }
 .reservation-page02 .bottom {
-  height: initial;
+  height: 70px;
+}
+.reservation-page02 .bottom .button-group {
+  padding: 15px 0 25px;
 }
 
 .reservation-page03 {
@@ -418,11 +424,6 @@ footer .qrcode {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-.reservation-page03 .back-section .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .reservation-page03 .container {
   position: relative;
@@ -457,7 +458,7 @@ footer .qrcode {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 25px 0 10px;
+  padding: 10px 25px 10px 10px;
 }
 .reservation-page03 .container .block .header i {
   color: #848484;
@@ -502,13 +503,21 @@ footer .qrcode {
   align-items: center;
 }
 .reservation-page03 .bottom {
-  height: initial;
+  height: 70px;
+}
+.reservation-page03 .bottom .button-group {
+  padding: 15px 0 25px;
 }
 
 .reservation-page04 {
   display: none;
   font-size: 13px;
   color: #8e8e8e;
+}
+.reservation-page04 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .reservation-page04 .schedules {
   position: relative;
@@ -617,7 +626,11 @@ footer .qrcode {
   background-color: #20b6c4;
 }
 .reservation-page04 .bottom {
-  height: initial;
+  height: 70px;
+  font-size: 16px;
+}
+.reservation-page04 .bottom .button-group {
+  padding: 15px 0 25px;
 }
 
 .reservation-page05 {
@@ -627,11 +640,6 @@ footer .qrcode {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-.reservation-page05 .back-section .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .reservation-page05 .container {
   position: relative;
@@ -649,13 +657,13 @@ footer .qrcode {
 .reservation-page05 .container .block .title {
   font-size: 16px;
   font-weight: 600;
-  line-height: 22px;
+  line-height: 24px;
 }
 .reservation-page05 .container .block .mark {
   color: #20b6c4;
 }
-.reservation-page05 .container .block p {
-  line-height: 22px;
+.reservation-page05 .container .block .content {
+  padding: 5px 38px;
 }
 .reservation-page05 .container .block .bottom {
   height: initial;
@@ -676,7 +684,6 @@ footer .qrcode {
   height: 100%;
 }
 .reservation-page06 .container {
-  margin-top: 10px;
   position: relative;
   flex: 1;
   overflow: auto;
@@ -684,8 +691,7 @@ footer .qrcode {
   flex-direction: column;
 }
 .reservation-page06 .container > div {
-  font-size: 14px;
-  padding-top: 20px;
+  line-height: 24px;
 }
 .reservation-page06 .bottom {
   height: 100px;
@@ -700,7 +706,6 @@ footer .qrcode {
   height: 100%;
 }
 .reservation-page07 .container {
-  margin-top: 10px;
   position: relative;
   flex: 1;
   overflow: auto;
@@ -711,8 +716,7 @@ footer .qrcode {
   color: #20b6c4;
 }
 .reservation-page07 .container > div {
-  font-size: 14px;
-  padding-top: 20px;
+  line-height: 24px;
 }
 .reservation-page07 .bottom {
   height: 100px;
@@ -734,11 +738,6 @@ footer .qrcode {
   flex-direction: column;
   height: 100%;
 }
-.reservation-page08 .back-section .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .reservation-page08 .container {
   position: relative;
   flex: 1;
@@ -755,7 +754,7 @@ footer .qrcode {
 .reservation-page08 .container .block .title {
   font-size: 16px;
   font-weight: 600;
-  line-height: 22px;
+  line-height: 24px;
 }
 .reservation-page08 .container .block .mark {
   color: #20b6c4;
@@ -765,9 +764,6 @@ footer .qrcode {
 }
 .reservation-page08 .container .block .content img {
   display: none;
-}
-.reservation-page08 .container .block p {
-  line-height: 22px;
 }
 .reservation-page08 .bottom {
   height: 100px;
@@ -794,8 +790,10 @@ footer .qrcode {
   flex: 1;
 }
 .reservation-page09 .container > div {
-  font-size: 14px;
-  padding-top: 20px;
+  line-height: 24px;
+}
+.reservation-page09 .container > .input-field + .input-field {
+  padding-top: 10px;
 }
 .reservation-page09 .bottom {
   height: 150px;
@@ -833,14 +831,17 @@ footer .qrcode {
 .cost-page .wrapper .block .header .status.unpaid {
   color: #20b6c4;
 }
-.cost-page .wrapper .block .item {
-  margin: 5px 0;
+.cost-page .wrapper .block .details-info {
+  padding: 10px 0;
+}
+.cost-page .wrapper .block .details-info .item {
   display: flex;
   justify-content: space-between;
   color: #848484;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 24px;
 }
-.cost-page .wrapper .block .item label {
+.cost-page .wrapper .block .details-info .item label {
   padding-left: 15px;
 }
 .cost-page .wrapper .block .bottom {
@@ -848,7 +849,6 @@ footer .qrcode {
 }
 .cost-page .wrapper .block .bottom .button-group {
   justify-content: flex-end;
-  padding: 0;
 }
 
 .cost-page01 {
@@ -893,11 +893,11 @@ footer .qrcode {
   padding: 0;
 }
 .cost-page01 .wrapper .item {
-  margin: 5px 0;
   display: flex;
   justify-content: space-between;
   color: #848484;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 24px;
 }
 .cost-page01 .wrapper .item label {
   padding-left: 15px;
@@ -911,7 +911,7 @@ footer .qrcode {
   padding: 5px 15px;
   border-top: 1px solid #848484;
   border-bottom: 1px solid #848484;
-  font-size: 12px;
+  font-size: 14px;
 }
 .cost-page01 .wrapper .cost-info .row.content {
   overflow: auto;
@@ -935,7 +935,7 @@ footer .qrcode {
   height: 100%;
 }
 .points-page .container {
-  height: initial;
+  flex: 1;
 }
 .points-page .container .details {
   border-bottom: 1px solid #f2f2f2;
@@ -944,16 +944,14 @@ footer .qrcode {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 24px;
 }
 .points-page .container .item.title {
   border-bottom: 1px solid #f2f2f2;
   color: #2f2260;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
-}
-.points-page .bottom {
-  height: initial;
 }
 
 .points-page01 {
@@ -984,10 +982,8 @@ footer .qrcode {
 .points-page01 .wrapper .container .record {
   padding: 10px;
   font-size: 14px;
+  line-height: 24px;
   color: #2f2260;
-}
-.points-page01 .wrapper .container .record > div + div {
-  margin-top: 10px;
 }
 .points-page01 .wrapper .container .give-point {
   background: #aedce3;
@@ -999,12 +995,11 @@ footer .qrcode {
   height: initial;
 }
 .points-page01 .wrapper .bottom .button-group {
-  padding-bottom: 25px;
+  padding: 15px 0 25px;
 }
 
 .points-page02 {
   display: none;
-  color: #848484;
 }
 .points-page02 .wrapper {
   display: flex;
@@ -1012,7 +1007,6 @@ footer .qrcode {
   height: 100%;
 }
 .points-page02 .container {
-  margin-top: 10px;
   position: relative;
   flex: 1;
   display: flex;
@@ -1020,11 +1014,10 @@ footer .qrcode {
 }
 .points-page02 .container .choice {
   width: 100%;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 30px;
   color: rgba(0, 0, 0, 0.678);
   flex: 1;
-  padding-top: 15px;
 }
 
 .apply-page {
@@ -1056,7 +1049,6 @@ footer .qrcode {
 
 .network-page {
   display: none;
-  color: #848484;
 }
 .network-page .wrapper {
   display: flex;
@@ -1069,7 +1061,6 @@ footer .qrcode {
   align-items: center;
 }
 .network-page .container {
-  margin-top: 10px;
   position: relative;
   flex: 1;
   overflow: auto;
@@ -1082,7 +1073,9 @@ footer .qrcode {
   line-height: 30px;
   color: rgba(0, 0, 0, 0.678);
   flex: 1;
-  padding-top: 15px;
+}
+.network-page .bottom {
+  height: 200px;
 }
 
 .network-page01 {
@@ -1095,7 +1088,6 @@ footer .qrcode {
   height: 100%;
 }
 .network-page01 .container {
-  margin-top: 10px;
   position: relative;
   flex: 1;
   overflow: auto;
@@ -1103,10 +1095,10 @@ footer .qrcode {
   flex-direction: column;
 }
 .network-page01 .container .mark {
-  color: DarkTurquoise;
+  color: #20b6c4;
 }
-.network-page01 .container > p {
-  line-height: 20px;
+.network-page01 .bottom {
+  height: 200px;
 }
 
 .clean-page {
@@ -1124,15 +1116,18 @@ footer .qrcode {
 }
 .clean-page .container > div,
 .clean-page .container ul {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 24px;
   margin: 0;
+}
+.clean-page .container ul {
+  padding-left: 18px;
 }
 .clean-page .container > div {
   margin-top: 10px;
 }
 .clean-page .bottom {
-  height: 150px;
+  height: 120px;
 }
 
 .clean-page01 {
@@ -1149,11 +1144,10 @@ footer .qrcode {
   flex: 1;
 }
 .clean-page01 .container > div {
-  font-size: 14px;
-  padding-top: 20px;
+  line-height: 24px;
 }
 .clean-page01 .bottom {
-  height: 150px;
+  height: 120px;
 }
 .clean-page01 .bottom .button-group {
   padding-bottom: 0;
@@ -1174,9 +1168,12 @@ footer .qrcode {
 }
 .repair-page .wrapper .container > div,
 .repair-page .wrapper .container ul {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 24px;
   margin: 0;
+}
+.repair-page .wrapper .container ul {
+  padding-left: 18px;
 }
 .repair-page .wrapper .container textarea {
   width: 100%;
@@ -1205,11 +1202,10 @@ footer .qrcode {
   flex: 1;
 }
 .repair-page01 .wrapper .container > div {
-  font-size: 14px;
-  padding-top: 20px;
+  line-height: 24px;
 }
 .repair-page01 .wrapper .bottom {
-  height: 125px;
+  height: 100px;
 }
 
 .agent-page {
@@ -1226,9 +1222,8 @@ footer .qrcode {
   flex: 1;
 }
 .agent-page .wrapper .container > div {
-  font-size: 14px;
-  padding-top: 20px;
-  line-height: 1;
+  font-size: 16px;
+  line-height: 24px;
 }
 .agent-page .wrapper .container textarea {
   width: 100%;
@@ -1255,8 +1250,7 @@ footer .qrcode {
   flex: 1;
 }
 .agent-page01 .wrapper .container > div {
-  font-size: 14px;
-  padding-top: 20px;
+  line-height: 24px;
 }
 .agent-page01 .wrapper .bottom {
   height: 125px;
@@ -1325,9 +1319,6 @@ footer .qrcode {
   border: none;
 }
 .recruit-page .bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 125px;
 }
 
@@ -1341,18 +1332,14 @@ footer .qrcode {
   padding-top: 20px;
 }
 .recruit-page01 .bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 125px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .recruit-page02 {
   display: none;
+}
+.recruit-page02 .container > div {
+  line-height: 24px;
 }
 .recruit-page02 .bottom {
   display: flex;
@@ -1387,20 +1374,13 @@ footer .qrcode {
 
 .rent-house-page {
   display: none;
-  color: #848484;
 }
 .rent-house-page .wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-.rent-house-page .back-section .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .rent-house-page .container {
-  margin-top: 10px;
   position: relative;
   flex: 1;
   overflow: auto;
@@ -1409,8 +1389,8 @@ footer .qrcode {
 }
 .rent-house-page .container .choice {
   width: 100%;
-  font-size: 15px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 24px;
   color: rgba(0, 0, 0, 0.678);
   flex: 1;
   padding-top: 15px;
@@ -1431,7 +1411,6 @@ footer .qrcode {
   height: 100%;
 }
 .rent-house-page01 .container {
-  margin-top: 10px;
   position: relative;
   flex: 1;
   overflow: auto;
@@ -1439,8 +1418,8 @@ footer .qrcode {
   flex-direction: column;
 }
 .rent-house-page01 .container > div {
-  font-size: 14px;
-  padding-top: 20px;
+  font-size: 16px;
+  line-height: 24px;
 }
 .rent-house-page01 .bottom {
   height: 100px;
@@ -1460,9 +1439,8 @@ footer .qrcode {
   flex: 1;
 }
 .financing-page .wrapper .container > div {
-  font-size: 14px;
-  padding-top: 20px;
-  line-height: 1;
+  font-size: 16px;
+  line-height: 24px;
 }
 .financing-page .wrapper .container textarea {
   width: 100%;
@@ -1489,8 +1467,8 @@ footer .qrcode {
   flex: 1;
 }
 .financing-page01 .wrapper .container > div {
-  font-size: 14px;
-  padding-top: 20px;
+  font-size: 16px;
+  line-height: 24px;
 }
 .financing-page01 .wrapper .bottom {
   height: 125px;
@@ -1510,9 +1488,8 @@ footer .qrcode {
   flex: 1;
 }
 .insurance-page .wrapper .container > div {
-  font-size: 14px;
-  padding-top: 20px;
-  line-height: 1;
+  font-size: 16px;
+  line-height: 24px;
 }
 .insurance-page .wrapper .container textarea {
   width: 100%;
@@ -1539,8 +1516,8 @@ footer .qrcode {
   flex: 1;
 }
 .insurance-page01 .wrapper .container > div {
-  font-size: 14px;
-  padding-top: 20px;
+  font-size: 16px;
+  line-height: 24px;
 }
 .insurance-page01 .wrapper .bottom {
   height: 125px;

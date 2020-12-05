@@ -784,11 +784,8 @@ footer {
         line-height: 22px;
       }
 
-      .subtitle {
+      .mark {
         color: $main-color;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 22px;
       }
 
       p {
@@ -806,6 +803,179 @@ footer {
           }
         }
       }
+    }
+  }
+}
+
+.reservation-page06 {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .container {
+    margin-top: 10px;
+    position: relative;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    >div {
+      font-size: 14px;
+      padding-top: 20px;
+    }
+  }
+
+  .bottom {
+    height: 100px;
+  }
+}
+
+.reservation-page07 {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .container {
+    margin-top: 10px;
+    position: relative;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    .mark {
+      color: $main-color;
+    }
+
+    >div {
+      font-size: 14px;
+      padding-top: 20px;
+    }
+  }
+
+  .bottom {
+    height: 100px;
+  }
+}
+
+.reservation-page08 {
+  display: none;
+
+  &.meeting-room {
+    .container {
+      .block {
+        .content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .back-section {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .container {
+    position: relative;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    .block {
+      border-radius: 10px;
+      background: #f2f2f2;
+      padding: 20px;
+      margin-bottom: 10px;
+
+      .title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+      }
+
+      .mark {
+        color: $main-color;
+      }
+
+      .content {
+        margin: 10px 0;
+
+        img {
+          display: none;
+        }
+      }
+
+      p {
+        line-height: 22px;
+      }
+    }
+  }
+
+  .bottom {
+    height: 100px;
+    padding-top: 20px;
+
+    .button-group {
+      padding: 0;
+    }
+
+    >.button-group+.button-group {
+      padding-top: 20px;
+    }
+  }
+}
+
+.reservation-page09 {
+  display: none;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    >div {
+      font-size: 14px;
+      padding-top: 20px;
+    }
+  }
+
+  .bottom {
+    height: 150px;
+
+    .button-group {
+      padding-bottom: 0;
     }
   }
 }

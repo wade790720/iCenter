@@ -651,11 +651,8 @@ footer .qrcode {
   font-weight: 600;
   line-height: 22px;
 }
-.reservation-page05 .container .block .subtitle {
+.reservation-page05 .container .block .mark {
   color: #20b6c4;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 22px;
 }
 .reservation-page05 .container .block p {
   line-height: 22px;
@@ -668,6 +665,143 @@ footer .qrcode {
 }
 .reservation-page05 .container .block .bottom .button-group button {
   background: #f2f2f2;
+}
+
+.reservation-page06 {
+  display: none;
+}
+.reservation-page06 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.reservation-page06 .container {
+  margin-top: 10px;
+  position: relative;
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.reservation-page06 .container > div {
+  font-size: 14px;
+  padding-top: 20px;
+}
+.reservation-page06 .bottom {
+  height: 100px;
+}
+
+.reservation-page07 {
+  display: none;
+}
+.reservation-page07 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.reservation-page07 .container {
+  margin-top: 10px;
+  position: relative;
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.reservation-page07 .container .mark {
+  color: #20b6c4;
+}
+.reservation-page07 .container > div {
+  font-size: 14px;
+  padding-top: 20px;
+}
+.reservation-page07 .bottom {
+  height: 100px;
+}
+
+.reservation-page08 {
+  display: none;
+}
+.reservation-page08.meeting-room .container .block .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reservation-page08.meeting-room .container .block .content img {
+  display: block;
+}
+.reservation-page08 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.reservation-page08 .back-section .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reservation-page08 .container {
+  position: relative;
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.reservation-page08 .container .block {
+  border-radius: 10px;
+  background: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.reservation-page08 .container .block .title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+.reservation-page08 .container .block .mark {
+  color: #20b6c4;
+}
+.reservation-page08 .container .block .content {
+  margin: 10px 0;
+}
+.reservation-page08 .container .block .content img {
+  display: none;
+}
+.reservation-page08 .container .block p {
+  line-height: 22px;
+}
+.reservation-page08 .bottom {
+  height: 100px;
+  padding-top: 20px;
+}
+.reservation-page08 .bottom .button-group {
+  padding: 0;
+}
+.reservation-page08 .bottom > .button-group + .button-group {
+  padding-top: 20px;
+}
+
+.reservation-page09 {
+  display: none;
+}
+.reservation-page09 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.reservation-page09 .container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.reservation-page09 .container > div {
+  font-size: 14px;
+  padding-top: 20px;
+}
+.reservation-page09 .bottom {
+  height: 150px;
+}
+.reservation-page09 .bottom .button-group {
+  padding-bottom: 0;
 }
 
 .cost-page {

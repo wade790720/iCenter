@@ -27,7 +27,7 @@
   </header>
 
   <!-- 首頁 -->
-  <main class="home-page">
+  <main class="home-page" style="display: none;">
     <div class="banner"></div>
     <div class="menu">
       <div class="menu-item reservation">
@@ -378,7 +378,7 @@
     </div>
   </div>
 
-  <!-- 預約頁 - 預約成功/會議室 -->
+  <!-- 預約頁 - 預約確認/會議室 -->
   <div class="page reservation-page05 meeting-room">
     <div class="wrapper">
       <div class="back-section">
@@ -390,7 +390,7 @@
       <div class="container">
         <div class="block">
           <div class="title">您預約了</div>
-          <div class="subtitle">21樓 Room i21A (10人)</div>
+          <div class="title mark">21樓 Room i21A (10人)</div>
           <p>日期：2020年10月20日</p>
           <p>時間：09:00-10:00</p>
           <p>需扣抵點數：2點</p>
@@ -421,7 +421,7 @@
     </div>
   </div>
 
-  <!-- 預約頁 - 預約成功/健身房 -->
+  <!-- 預約頁 - 預約確認/健身房 -->
   <div class="page reservation-page05 gym">
     <div class="wrapper">
       <div class="back-section">
@@ -433,7 +433,7 @@
       <div class="container">
         <div class="block">
           <div class="title">您預約了</div>
-          <div class="subtitle">21樓 Room i21A (10人)</div>
+          <div class="title mark">21樓 Room i21A (10人)</div>
           <p>日期：2020年10月20日</p>
           <p>時間：09:00-10:00</p>
           <p>需扣抵點數：2點</p>
@@ -464,7 +464,7 @@
     </div>
   </div>
 
-  <!-- 預約頁 - 預約成功/SPA -->
+  <!-- 預約頁 - 預約確認/SPA -->
   <div class="page reservation-page05 spa">
     <div class="wrapper">
       <div class="back-section">
@@ -476,7 +476,7 @@
       <div class="container">
         <div class="block">
           <div class="title">您預約了</div>
-          <div class="subtitle">21樓 Room i21A (10人)</div>
+          <div class="title mark">21樓 Room i21A (10人)</div>
           <p>日期：2020年10月20日</p>
           <p>時間：09:00-10:00</p>
           <p>需扣抵點數：2點</p>
@@ -503,6 +503,181 @@
           </div>
         </div>
         <p>請注意，確定預約後，點數即將被扣抵，如欲取消預約，請於會議前12小時至我的行事曆中點選取消。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 預約頁 - 確認頁/非管理者 -->
+  <div class="page reservation-page06">
+    <div class="wrapper">
+      <div class="back-section"></div>
+      <h2>會議室預約</h2>
+      <div class="container">
+        <div>您的預約申請已經完成，系統已發送訊息給貴公司管理人員覆核，此預約將暫時保留30分鐘，請於時間內完成預約流程。</div>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button class="submit">確定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 預約頁 - 管理者覆核通知頁 -->
+  <div class="page reservation-page05 admin">
+    <div class="wrapper">
+      <div class="back-section">
+        <div class="header">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+      </div>
+      <h2>會議室預約</h2>
+      <div class="container">
+        <div class="block">
+          <div class="title">您的同事 <span class="mark">John</span> 申請預約了</div>
+          <div class="title mark">21樓 Room i21A (10人)</div>
+          <p>日期：2020年10月20日</p>
+          <p>時間：09:00-10:00</p>
+          <p>需扣抵點數：2點</p>
+          <div class="content">
+            <div class="single-item">
+              <div>
+                <img src="./images/reservation01.jpg" style="width: 100%;">
+              </div>
+              <div>
+                <img src="./images/reservation01.jpg" style="width: 100%;">
+              </div>
+              <div>
+                <img src="./images/reservation01.jpg" style="width: 100%;">
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="bottom">
+              <div class="button-group">
+                <button class="submit">確定預約</button>
+                <button class="back">取消預約</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>請注意，確定預約後，點數即將被扣抵，如欲取消預約，請於會議前12小時至我的行事曆中點選取消。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 預約頁 - 管理者點數不足 -->
+  <div class="page reservation-page07">
+    <div class="wrapper">
+      <div class="back-section"></div>
+      <h2>會議室預約</h2>
+      <div class="container">
+        <div class="mark">抱歉！您的點數不足，無法預約該會議室。</div>
+        <div>您的預約申請已經完成，系統已發送訊息給貴公司管理人員覆核，此預約將暫時保留30分鐘，請於時間內完成預約流程。</div>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button class="submit">購買點數</button>
+          <button class="submit">取消預約</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 預約頁 - 預約成功/會議室 -->
+  <div class="page reservation-page08 meeting-room">
+    <div class="wrapper">
+      <div class="back-section">
+        <div class="header">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+      </div>
+      <h2>會議室預約</h2>
+      <div class="container">
+        <div class="block">
+          <div class="title">您已預約成功</div>
+          <div class="title mark">21樓 Room i21A (10人)</div>
+          <p>日期：2020年10月20日</p>
+          <p>時間：09:00-10:00</p>
+          <p>需扣抵點數：2點</p>
+          <p>參加者：Jame、Grace、John</p>
+          <div class="content">
+            <!-- 放置QRCODE -->
+            <img src="./images/qrcode-url.png" alt="qrcode-url">
+          </div>
+          <p>請注意，確定預約後，點數即將被扣抵，如欲取消預約，請於會議前12小時至我的行事曆中點選取消。</p>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button class="extend">延長</button>
+          <button class="invite">邀請</button>
+        </div>
+        <div class="button-group">
+          <button class="delete">刪除預約</button>
+          <button class="add">新增預約</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 預約頁 - 預約成功/健身房/SPA -->
+  <div class="page reservation-page08 gym spa">
+    <div class="wrapper">
+      <div class="back-section">
+        <div class="header">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+      </div>
+      <h2>健身房預約</h2>
+      <div class="container">
+        <div class="block">
+          <div class="title">您已預約成功</div>
+          <div class="title mark">21樓 Room i21A (10人)</div>
+          <p>日期：2020年10月20日</p>
+          <p>時間：09:00-10:00</p>
+          <p>需扣抵點數：2點</p>
+          <p>參加者：Jame、Grace、John</p>
+          <div class="content"></div>
+          <p>請注意，確定預約後，點數即將被扣抵，如欲取消預約，請於會議前12小時至我的行事曆中點選取消。</p>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button class="remind">提醒</button>
+          <button class="finish">完成</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 預約頁 - 延長頁 -->
+  <div class="page reservation-page09">
+    <div class="wrapper">
+      <div class="back-section"></div>
+      <h2>請問要延長多久?</h2>
+      <div class="container">
+        <div class="input-field">
+          <input type="radio" id="30" name="time" value="30">
+          <label for="30">30分鐘</label>
+        </div>
+        <div class="input-field">
+          <input type="radio" id="60" name="time" value="60">
+          <label for="60">60分鐘</label>
+        </div>
+        <div class="input-field">
+          <input type="radio" id="90" name="time" value="90">
+          <label for="90">90分鐘</label>
+        </div>
+        <div class="input-field">
+          <input type="radio" id="120" name="time" value="120">
+          <label for="120">120分鐘</label>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="button-group">
+          <button class="submit">確定</button>
+        </div>
       </div>
     </div>
   </div>

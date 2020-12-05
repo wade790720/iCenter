@@ -241,7 +241,7 @@ footer .qrcode {
 
 .reservation-page {
   display: none;
-  padding: 25px;
+  padding: 25px 55px;
 }
 .reservation-page .menu-list {
   display: flex;
@@ -282,7 +282,6 @@ footer .qrcode {
 
 .reservation-page01 {
   display: none;
-  color: #848484;
 }
 .reservation-page01 .wrapper {
   display: flex;
@@ -368,7 +367,6 @@ footer .qrcode {
 
 .reservation-page02 {
   display: none;
-  color: #848484;
 }
 .reservation-page02 .wrapper {
   display: flex;

@@ -14,6 +14,9 @@ var reservationPage03MeetingRoom = $('.reservation-page03.meeting-room')
 var reservationPage03Gym = $('.reservation-page03.gym')
 var reservationPage03Spa = $('.reservation-page03.spa')
 var reservationPage04 = $('.reservation-page04')
+var reservationPage05MeetingRoom = $('.reservation-page05.meeting-room')
+var reservationPage05Gym = $('.reservation-page05.gym')
+var reservationPage05Spa = $('.reservation-page05.spa')
 var costPage = $('.cost-page')
 var costPage01 = $('.cost-page01')
 var pointsPage = $('.points-page')
@@ -207,6 +210,28 @@ reservationPage04.find('.back-section .fa-chevron-left').on('click', () => {
     reservationPage04.removeClass('meeting-room').removeClass('gym').removeClass('spa');
 })
 
+reservationPage04.find('.submit').on('click', () => {
+    if (reservationPage04.hasClass('meeting-room')) {
+        reservationPage04.hide();
+        reservationPage05MeetingRoom.show();
+        reservationPage05MeetingRoom.find('.single-item').get(0).slick.setPosition()
+    }
+
+    if (reservationPage04.hasClass('gym')) {
+        reservationPage04.hide();
+        reservationPage05Gym.show();
+        reservationPage05Gym.find('.single-item').get(0).slick.setPosition()
+    }
+
+    if (reservationPage04.hasClass('spa')) {
+        reservationPage04.hide();
+        reservationPage05Spa.show();
+        reservationPage05Spa.find('.single-item').get(0).slick.setPosition()
+    }
+
+    reservationPage04.removeClass('meeting-room').removeClass('gym').removeClass('spa');
+})
+
 var initReservationPage04MeetingRoom = () => {
     var TYPE = {
         open: 0,
@@ -281,6 +306,46 @@ $(function () {
         dots: true,
         infinite: true,
     });
+})
+
+// 預約頁 - 確認頁
+reservationPage05MeetingRoom.find('.back-section .fa-chevron-left').on('click', () => {
+    reservationPage05MeetingRoom.hide();
+    reservationPage04.show();
+    reservationPage04.find('h2').text('會議空間預約');
+    reservationPage04.addClass('meeting-room')
+})
+reservationPage05MeetingRoom.find('.back').on('click', () => {
+    reservationPage05MeetingRoom.hide();
+    reservationPage04.show();
+    reservationPage04.find('h2').text('會議空間預約');
+    reservationPage04.addClass('meeting-room')
+})
+
+reservationPage05Gym.find('.back-section .fa-chevron-left').on('click', () => {
+    reservationPage05Gym.hide();
+    reservationPage04.show();
+    reservationPage04.find('h2').text('健身房預約');
+    reservationPage04.addClass('gym')
+})
+reservationPage05Gym.find('.back').on('click', () => {
+    reservationPage05Gym.hide();
+    reservationPage04.show();
+    reservationPage04.find('h2').text('健身房預約');
+    reservationPage04.addClass('gym')
+})
+
+reservationPage05Spa.find('.back-section .fa-chevron-left').on('click', () => {
+    reservationPage05Spa.hide();
+    reservationPage04.show();
+    reservationPage04.find('h2').text('SPA預約');
+    reservationPage04.addClass('gym')
+})
+reservationPage05Spa.find('.back').on('click', () => {
+    reservationPage05Spa.hide();
+    reservationPage04.show();
+    reservationPage04.find('h2').text('SPA預約');
+    reservationPage04.addClass('gym')
 })
 
 // 費用頁

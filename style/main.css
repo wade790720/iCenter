@@ -616,6 +616,59 @@ footer .qrcode {
 .reservation-page04 .description > div.selected:before {
   background-color: #20b6c4;
 }
+.reservation-page04 .bottom {
+  height: initial;
+}
+
+.reservation-page05 {
+  display: none;
+}
+.reservation-page05 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.reservation-page05 .back-section .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reservation-page05 .container {
+  position: relative;
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.reservation-page05 .container .block {
+  border-radius: 10px;
+  background: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.reservation-page05 .container .block .title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+.reservation-page05 .container .block .subtitle {
+  color: #20b6c4;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+}
+.reservation-page05 .container .block p {
+  line-height: 22px;
+}
+.reservation-page05 .container .block .bottom {
+  height: initial;
+}
+.reservation-page05 .container .block .bottom .button-group {
+  padding: 0;
+}
+.reservation-page05 .container .block .bottom .button-group button {
+  background: #f2f2f2;
+}
 
 .cost-page {
   display: none;
@@ -935,7 +988,8 @@ footer .qrcode {
   flex-direction: column;
   flex: 1;
 }
-.clean-page .container > div, .clean-page .container ul {
+.clean-page .container > div,
+.clean-page .container ul {
   font-size: 14px;
   line-height: 22px;
   margin: 0;

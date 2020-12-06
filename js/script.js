@@ -17,6 +17,9 @@ var reservationPage04 = $('.reservation-page04')
 var reservationPage05MeetingRoom = $('.reservation-page05.meeting-room')
 var reservationPage05Gym = $('.reservation-page05.gym')
 var reservationPage05Spa = $('.reservation-page05.spa')
+var reservationPage06 = $('.reservation-page06')
+var reservationPage07 = $('.reservation-page07')
+var reservationPage08Other = $('.reservation-page08.other')
 var costPage = $('.cost-page')
 var costPage01 = $('.cost-page01')
 var pointsPage = $('.points-page')
@@ -47,7 +50,10 @@ tabHome.on("click", () => {
     homePage.show();
     $('.page').hide();
     reservationPage01.removeClass('meeting-room').removeClass('gym').removeClass('spa');
-    reservationPage04.removeClass('meeting-room').removeClass('gym').removeClass('spa')
+    reservationPage04.removeClass('meeting-room').removeClass('gym').removeClass('spa');
+    reservationPage06.removeClass('meeting-room').removeClass('gym').removeClass('spa');
+    reservationPage07.removeClass('meeting-room').removeClass('gym').removeClass('spa');
+    reservationPage08Other.removeClass('gym').removeClass('spa');
 })
 
 reservation.on("click", () => {
@@ -75,28 +81,57 @@ reservationPage.find('.meeting-room').on('click', () => {
     reservationPage.hide();
     reservationPage01.show();
     reservationPage01.find('h2').text('會議空間預約');
-    reservationPage01.addClass('meeting-room')
+    reservationPage04.find('h2').text('會議空間預約');
+    reservationPage06.find('h2').text('會議空間預約');
+    reservationPage07.find('h2').text('會議空間預約');
+    reservationPage07.find('.room').text('會議室');
+    reservationPage01.addClass('meeting-room');
+    reservationPage04.addClass('meeting-room');
+    reservationPage06.addClass('meeting-room');
+    reservationPage07.addClass('meeting-room');
 })
 
 reservationPage.find('.gym').on('click', () => {
     reservationPage.hide();
     reservationPage01.show()
     reservationPage01.find('h2').text('健身房預約');
-    reservationPage01.addClass('gym')
+    reservationPage04.find('h2').text('健身房預約');
+    reservationPage06.find('h2').text('健身房預約');
+    reservationPage07.find('h2').text('健身房預約');
+    reservationPage07.find('.room').text('健身房');
+    reservationPage08Other.find('h2').text('健身房預約');
+    reservationPage01.addClass('gym');
+    reservationPage04.addClass('gym');
+    reservationPage06.addClass('gym');
+    reservationPage07.addClass('gym');
+    reservationPage08Other.addClass('gym');
 })
 
 reservationPage.find('.spa').on('click', () => {
     reservationPage.hide();
     reservationPage01.show()
     reservationPage01.find('h2').text('SPA預約');
-    reservationPage01.addClass('spa')
+    reservationPage04.find('h2').text('SPA預約');
+    reservationPage06.find('h2').text('SPA預約');
+    reservationPage07.find('h2').text('SPA預約');
+    reservationPage07.find('.room').text('SPA');
+    reservationPage08Other.find('h2').text('SPA預約');
+    reservationPage01.addClass('spa');
+    reservationPage04.addClass('spa');
+    reservationPage06.addClass('spa');
+    reservationPage07.addClass('spa');
+    reservationPage08Other.addClass('spa');
 })
 
 // 預約頁 - 收尋頁
 reservationPage01.find('.back-section .fa-chevron-left').on('click', () => {
     reservationPage01.hide();
     reservationPage.show();
-    reservationPage01.removeClass('meeting-room').removeClass('gym').removeClass('spa')
+    reservationPage01.removeClass('meeting-room').removeClass('gym').removeClass('spa');
+    reservationPage04.removeClass('meeting-room').removeClass('gym').removeClass('spa');
+    reservationPage06.removeClass('meeting-room').removeClass('gym').removeClass('spa');
+    reservationPage07.removeClass('meeting-room').removeClass('gym').removeClass('spa');
+    reservationPage08Other.removeClass('gym').removeClass('spa');
 })
 
 reservationPage01.find('.join').on('click', () => {
@@ -151,8 +186,6 @@ reservationPage03MeetingRoom.find('.back').on('click', () => {
 reservationPage03MeetingRoom.find('.check-calendar').on('click', () => {
     reservationPage03MeetingRoom.hide();
     initReservationPage04MeetingRoom();
-    reservationPage04.find('h2').text('會議空間預約');
-    reservationPage04.addClass('meeting-room')
 })
 
 reservationPage03MeetingRoom.find('.container .block').map(function () {
@@ -184,8 +217,6 @@ reservationPage03Gym.find('.back').on('click', () => {
 reservationPage03Gym.find('.check-calendar').on('click', () => {
     reservationPage03Gym.hide();
     initReservationPage04MeetingRoom();
-    reservationPage04.find('h2').text('健身房預約');
-    reservationPage04.addClass('gym')
 })
 
 // 預約頁 - 收尋結果/SPA
@@ -202,8 +233,6 @@ reservationPage03Spa.find('.back').on('click', () => {
 reservationPage03Spa.find('.check-calendar').on('click', () => {
     reservationPage03Spa.hide();
     initReservationPage04MeetingRoom();
-    reservationPage04.find('h2').text('SPA預約');
-    reservationPage04.addClass('spa')
 })
 
 // 預約頁 - 預約日期
@@ -211,19 +240,20 @@ reservationPage04.find('.back-section .fa-chevron-left').on('click', () => {
     if (reservationPage04.hasClass('meeting-room')) {
         reservationPage04.hide();
         reservationPage03MeetingRoom.show();
+        reservationPage05MeetingRoom.find('.single-item').get(0).slick.setPosition();
     }
 
     if (reservationPage04.hasClass('gym')) {
         reservationPage04.hide();
         reservationPage03Gym.show();
+        reservationPage05Gym.find('.single-item').get(0).slick.setPosition();
     }
 
     if (reservationPage04.hasClass('spa')) {
         reservationPage04.hide();
         reservationPage03Spa.show();
+        reservationPage05Spa.find('.single-item').get(0).slick.setPosition();
     }
-
-    reservationPage04.removeClass('meeting-room').removeClass('gym').removeClass('spa');
 })
 
 reservationPage04.find('.submit').on('click', () => {
@@ -244,8 +274,6 @@ reservationPage04.find('.submit').on('click', () => {
         reservationPage05Spa.show();
         reservationPage05Spa.find('.single-item').get(0).slick.setPosition()
     }
-
-    reservationPage04.removeClass('meeting-room').removeClass('gym').removeClass('spa');
 })
 
 var initReservationPage04MeetingRoom = () => {
@@ -328,40 +356,46 @@ $(function () {
 reservationPage05MeetingRoom.find('.back-section .fa-chevron-left').on('click', () => {
     reservationPage05MeetingRoom.hide();
     reservationPage04.show();
-    reservationPage04.find('h2').text('會議空間預約');
-    reservationPage04.addClass('meeting-room')
 })
+
+reservationPage05MeetingRoom.find('.submit').on('click', () => {
+    reservationPage05MeetingRoom.hide();
+    reservationPage06.show();
+})
+
 reservationPage05MeetingRoom.find('.back').on('click', () => {
     reservationPage05MeetingRoom.hide();
     reservationPage04.show();
-    reservationPage04.find('h2').text('會議空間預約');
-    reservationPage04.addClass('meeting-room')
 })
 
 reservationPage05Gym.find('.back-section .fa-chevron-left').on('click', () => {
     reservationPage05Gym.hide();
     reservationPage04.show();
-    reservationPage04.find('h2').text('健身房預約');
-    reservationPage04.addClass('gym')
 })
+
+reservationPage05Gym.find('.submit').on('click', () => {
+    reservationPage05Gym.hide();
+    reservationPage06.show();
+})
+
 reservationPage05Gym.find('.back').on('click', () => {
     reservationPage05Gym.hide();
     reservationPage04.show();
-    reservationPage04.find('h2').text('健身房預約');
-    reservationPage04.addClass('gym')
 })
 
 reservationPage05Spa.find('.back-section .fa-chevron-left').on('click', () => {
     reservationPage05Spa.hide();
     reservationPage04.show();
-    reservationPage04.find('h2').text('SPA預約');
-    reservationPage04.addClass('gym')
 })
+
+reservationPage05Spa.find('.submit').on('click', () => {
+    reservationPage05Spa.hide();
+    reservationPage06.show();
+})
+
 reservationPage05Spa.find('.back').on('click', () => {
     reservationPage05Spa.hide();
     reservationPage04.show();
-    reservationPage04.find('h2').text('SPA預約');
-    reservationPage04.addClass('gym')
 })
 
 // 費用頁
@@ -390,8 +424,6 @@ pointsPage01.find('.back').on('click', () => {
     pointsPage01.hide();
     pointsPage.show()
 })
-
-
 
 $(function () {
     pointsPage01.find('.calendar').pignoseCalendar({
@@ -423,9 +455,6 @@ $(function () {
     pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-thu').text('T')
     pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-fri').text('F')
     pointsPage01.find('.pignose-calendar-header .pignose-calendar-week-sat').text('S')
-
-    // init pages
-    // initReservationPage04MeetingRoom();
 });
 
 
@@ -487,35 +516,35 @@ networkPage.find('.back-section .fa-chevron-left').on('click', () => {
 
 networkPage.find('.submit').on('click', () => {
     networkPage.hide();
-    networkPage01.show()
+    networkPage01.show();
 })
 
 networkPage.find('.back').on('click', () => {
     networkPage.hide();
-    applyPage.show()
+    applyPage.show();
 })
 
 networkPage01.find('.back').on('click', () => {
     networkPage.show();
-    networkPage01.hide()
+    networkPage01.hide();
 })
 
 // 申請頁 - 辦公室清潔
 cleanPage.find('.submit').on('click', () => {
     cleanPage.hide();
-    cleanPage01.show()
+    cleanPage01.show();
 })
 
 // 申請頁 - 修繕
 repairPage.find('.submit').on('click', () => {
     repairPage.hide();
-    repairPage01.show()
+    repairPage01.show();
 })
 
 // 申請頁 - 商務代辦
 agentPage.find('.submit').on('click', () => {
     agentPage.hide();
-    agentPage01.show()
+    agentPage01.show();
 })
 
 // 申請頁 - 招聘
@@ -598,6 +627,7 @@ financingPage.find('.submit').on('click', () => {
     financingPage01.show();
 })
 
+// 申請頁 - 保險
 insurancePage.find('.submit').on('click', () => {
     insurancePage.hide();
     insurancePage01.show();

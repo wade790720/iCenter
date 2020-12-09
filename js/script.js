@@ -4,6 +4,7 @@ var reservation = $(".home-page .reservation");
 var cost = $(".home-page .cost");
 var points = $(".home-page .points");
 var apply = $(".home-page .apply");
+var navgationDrawer = $('.navgation-drawer')
 
 // 頁面
 var homePage = $('.home-page')
@@ -54,6 +55,45 @@ tabHome.on("click", () => {
     reservationPage06.removeClass('meeting-room').removeClass('gym').removeClass('spa');
     reservationPage07.removeClass('meeting-room').removeClass('gym').removeClass('spa');
     reservationPage08Other.removeClass('gym').removeClass('spa');
+})
+
+$('.header-button .fa-bars').on('click', () => {
+    navgationDrawer.show();
+})
+
+// 側邊欄Menu
+navgationDrawer.find('.item.reservation').on('click', function () {
+    if ($(this).find('.fas').hasClass('fa-chevron-down')) {
+        $(this).find('.fas').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+        $(this).addClass('active')
+        $('.sub-item.reservation').show()
+    } else {
+        $(this).find('.fas').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+        $(this).removeClass('active')
+        $('.sub-item.reservation').hide()
+    }
+})
+navgationDrawer.find('.item.apply').on('click', function () {
+    if ($(this).find('.fas').hasClass('fa-chevron-down')) {
+        $(this).find('.fas').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+        $(this).addClass('active')
+        $('.sub-item.apply').show()
+    } else {
+        $(this).find('.fas').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+        $(this).removeClass('active')
+        $('.sub-item.apply').hide()
+    }
+})
+navgationDrawer.find('.item.info').on('click', function () {
+    if ($(this).find('.fas').hasClass('fa-chevron-down')) {
+        $(this).find('.fas').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+        $(this).addClass('active')
+        $('.sub-item.info').show()
+    } else {
+        $(this).find('.fas').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+        $(this).removeClass('active')
+        $('.sub-item.info').hide()
+    }
 })
 
 reservation.on("click", () => {

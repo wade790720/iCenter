@@ -236,6 +236,47 @@ footer {
   }
 }
 
+// 側邊欄Menu
+.navgation-drawer {
+  width: 200px;
+  height: 100%;
+  background: #f1f1f3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 70px 0;
+  overflow: auto;
+  box-sizing: border-box;
+  border-radius: 0 20px 20px 0;
+  display: none;
+
+  .item {
+    padding: 0 20px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $grey-color;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &.active {
+      background: #d1d2d4;
+    }
+  }
+
+  .sub-item {
+    background: #e6e7e9;
+    display: none;
+
+    .item {
+      font-size: 14px;
+    }
+  }
+}
+
 .home-page {
   width: 100%;
   height: calc(100% - 120px);

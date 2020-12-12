@@ -4,6 +4,7 @@ var reservation = $(".home-page .reservation");
 var cost = $(".home-page .cost");
 var points = $(".home-page .points");
 var apply = $(".home-page .apply");
+var info = $(".home-page .info");
 var navgationDrawer = $('.navgation-drawer')
 
 // 頁面
@@ -45,7 +46,10 @@ var financingPage = $('.financing-page')
 var financingPage01 = $('.financing-page01')
 var insurancePage = $('.insurance-page')
 var insurancePage01 = $('.insurance-page01')
-
+var infoPage = $('.info-page')
+var infoPage01 = $('.info-page01')
+var infoPage02 = $('.info-page02')
+var infoPage03 = $('.info-page03')
 
 tabHome.on("click", () => {
     homePage.show();
@@ -113,6 +117,11 @@ points.on("click", () => {
 
 apply.on("click", () => {
     applyPage.show();
+    homePage.hide();
+});
+
+info.on("click", () => {
+    infoPage.show();
     homePage.hide();
 });
 
@@ -671,4 +680,40 @@ financingPage.find('.submit').on('click', () => {
 insurancePage.find('.submit').on('click', () => {
     insurancePage.hide();
     insurancePage01.show();
+})
+
+// 資訊頁 - 選單
+var onlineNews = $('.info-page .menu .online-news')
+var exchangeRate = $('.info-page .menu .exchange-rate')
+var recruit = $('.info-page .menu .recruit')
+
+
+onlineNews.on('click', () => {
+    infoPage.hide();
+    infoPage01.show();
+})
+
+exchangeRate.on('click', () => {
+    infoPage.hide();
+    infoPage02.show();
+})
+
+recruit.on('click', () => {
+    infoPage.hide();
+    infoPage03.show();
+})
+
+infoPage01.find('.back-section .fa-chevron-left').on('click', () => {
+    infoPage.show();
+    infoPage01.hide();
+})
+
+infoPage02.find('.back-section .fa-chevron-left').on('click', () => {
+    infoPage.show();
+    infoPage02.hide();
+})
+
+infoPage03.find('.back-section .fa-chevron-left').on('click', () => {
+    infoPage.show();
+    infoPage03.hide();
 })

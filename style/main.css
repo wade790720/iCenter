@@ -1556,3 +1556,178 @@ footer .qrcode {
 .insurance-page01 .wrapper .bottom {
   height: 125px;
 }
+
+.info-page {
+  display: none;
+}
+.info-page .container {
+  padding: 0;
+}
+.info-page .menu {
+  width: 100%;
+  height: 100%;
+  color: #20b6c4;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.info-page .menu .menu-item {
+  width: calc(100% / 2);
+  height: calc(100% / 4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.info-page .menu img {
+  width: 60px;
+  height: 60px;
+}
+
+.info-page01 {
+  display: none;
+}
+.info-page01 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.info-page01 .container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.info-page01 .container > div {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  margin-top: 10px;
+  border-bottom: 1px solid #848484;
+}
+
+.info-page02 {
+  display: none;
+  padding: 0;
+}
+.info-page02 .title {
+  padding: 0 20px;
+}
+.info-page02 .back-section {
+  padding: 20px;
+  width: initial;
+  height: initial;
+}
+.info-page02 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.info-page02 .container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 15px 0;
+}
+.info-page02 .container .tab {
+  display: flex;
+  justify-content: space-around;
+}
+.info-page02 .container .tab .tabs {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid #f2f2f2;
+}
+.info-page02 .container .tab .tabs.active {
+  border-bottom: 3px solid #f2c523;
+}
+.info-page02 .container .setting-outer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.info-page02 .container .setting-outer .setting {
+  color: #20b6c4;
+}
+.info-page02 .container .table .header {
+  display: flex;
+  align-items: center;
+  background: #f2f2f2;
+  padding: 10px 0;
+}
+.info-page02 .container .table .header .th {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info-page02 .container .table .header .th:first-child {
+  flex: 0 0 170px;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+.info-page02 .container .table .row {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.info-page02 .container .table .row .td {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.info-page02 .container .table .row .td i {
+  color: #20b6c4;
+  font-size: 20px;
+  position: absolute;
+  right: 12px;
+}
+.info-page02 .container .table .row .td:first-child {
+  flex: 0 0 170px;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+.info-page02 .container .table > .row + .row {
+  border-top: 1px solid #f2f2f2;
+}
+.info-page02 .container > div {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.info-page03 {
+  display: none;
+}
+.info-page03 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.info-page03 .container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 15px 0;
+  overflow: auto;
+}
+.info-page03 .container > .card + .card {
+  margin-top: 15px;
+}
+.info-page03 .container .card {
+  border-left: 5px solid #20b6c4;
+  background: #f2f2f2;
+  border-radius: 0 10px 10px 0;
+}
+.info-page03 .container .card > div {
+  color: #2f2260;
+  margin: 15px 8px;
+}
+.info-page03 .container .card > p {
+  background: #e6e7e9;
+  border-radius: 0 0 10px 0;
+  padding: 8px;
+}

@@ -2023,6 +2023,12 @@ footer {
           align-items: center;
           position: relative;
 
+          img {
+            width: 25px;
+            margin-right: 10px;
+            border: 1px solid $light-grey-color;
+          }
+
           i {
             color: $main-color;
             font-size: 20px;

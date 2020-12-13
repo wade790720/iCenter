@@ -1680,6 +1680,11 @@ footer .qrcode {
   align-items: center;
   position: relative;
 }
+.info-page02 .container .table .row .td img {
+  width: 25px;
+  margin-right: 10px;
+  border: 1px solid #f2f2f2;
+}
 .info-page02 .container .table .row .td i {
   color: #20b6c4;
   font-size: 20px;

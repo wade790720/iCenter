@@ -1,14 +1,17 @@
 // 首頁
-var tabHome = $('.tab-bars .bar.home')
+var tabHome = $('.tab-bars .bar.home');
+var tabCalendar = $('.tab-bars .bar.calendar');
 var reservation = $(".home-page .reservation");
 var cost = $(".home-page .cost");
 var points = $(".home-page .points");
 var apply = $(".home-page .apply");
 var info = $(".home-page .info");
 var navgationDrawer = $('.navgation-drawer')
+var notice = $('.notice')
 
 // 頁面
 var homePage = $('.home-page')
+var calendarPage = $('.calendar-page')
 var reservationPage = $('.reservation-page')
 var reservationPage01 = $('.reservation-page01')
 var reservationPage02 = $('.reservation-page02')
@@ -51,6 +54,7 @@ var infoPage01 = $('.info-page01')
 var infoPage02 = $('.info-page02')
 var infoPage03 = $('.info-page03')
 
+// Tab
 tabHome.on("click", () => {
     homePage.show();
     $('.page').hide();
@@ -59,10 +63,32 @@ tabHome.on("click", () => {
     reservationPage06.removeClass('meeting-room').removeClass('gym').removeClass('spa');
     reservationPage07.removeClass('meeting-room').removeClass('gym').removeClass('spa');
     reservationPage08Other.removeClass('gym').removeClass('spa');
+
+    tabHome.addClass('active');
+    tabCalendar.removeClass('active');
 })
 
+tabCalendar.on("click", () => {
+    homePage.hide();
+    calendarPage.show();
+    tabCalendar.addClass('active');
+    tabHome.removeClass('active');
+})
+
+// 首頁左上角icon
 $('.header-button .fa-bars').on('click', () => {
     navgationDrawer.show();
+})
+
+// 首頁右上角icon
+$('.header-button .fa-bell').on('click', () => {
+    homePage.hide();
+    notice.show();
+})
+
+notice.find('.back-section .fa-chevron-left').on('click', () => {
+    notice.hide();
+    homePage.show();
 })
 
 // 側邊欄Menu
@@ -77,6 +103,7 @@ navgationDrawer.find('.item.reservation').on('click', function () {
         $('.sub-item.reservation').hide()
     }
 })
+
 navgationDrawer.find('.item.apply').on('click', function () {
     if ($(this).find('.fas').hasClass('fa-chevron-down')) {
         $(this).find('.fas').removeClass('fa-chevron-down').addClass('fa-chevron-up');
@@ -88,6 +115,7 @@ navgationDrawer.find('.item.apply').on('click', function () {
         $('.sub-item.apply').hide()
     }
 })
+
 navgationDrawer.find('.item.info').on('click', function () {
     if ($(this).find('.fas').hasClass('fa-chevron-down')) {
         $(this).find('.fas').removeClass('fa-chevron-down').addClass('fa-chevron-up');
@@ -100,6 +128,7 @@ navgationDrawer.find('.item.info').on('click', function () {
     }
 })
 
+// 首頁選單
 reservation.on("click", () => {
     reservationPage.show();
     homePage.hide();
@@ -124,6 +153,51 @@ info.on("click", () => {
     infoPage.show();
     homePage.hide();
 });
+
+// 行事曆
+$(function () {
+    calendarPage.find('.calendar').pignoseCalendar({
+        scheduleOptions: {
+            colors: {
+                event: '#95be50'
+            }
+        },
+        schedules: [{
+            name: 'event',
+            date: '2020-11-25'
+        }, {
+            name: 'event',
+            date: '2020-11-19'
+        }, {
+            name: 'event',
+            date: '2020-11-05',
+        }],
+        select: function (date, context) {
+            var $this = $(this);
+
+            console.log($this);
+        }
+    });
+    calendarPage.find('.pignose-calendar-header .pignose-calendar-week-sun').text('S')
+    calendarPage.find('.pignose-calendar-header .pignose-calendar-week-mon').text('M')
+    calendarPage.find('.pignose-calendar-header .pignose-calendar-week-tue').text('T')
+    calendarPage.find('.pignose-calendar-header .pignose-calendar-week-wed').text('W')
+    calendarPage.find('.pignose-calendar-header .pignose-calendar-week-thu').text('T')
+    calendarPage.find('.pignose-calendar-header .pignose-calendar-week-fri').text('F')
+    calendarPage.find('.pignose-calendar-header .pignose-calendar-week-sat').text('S')
+});
+
+calendarPage.find('.header .toggle').on('click', function () {
+    if ($(this).hasClass('board')) {
+        $(this).removeClass('board').addClass('list')
+        calendarPage.find('.container.list').show();
+        calendarPage.find('.container.board').hide();
+    } else {
+        $(this).removeClass('list').addClass('board')
+        calendarPage.find('.container.board').show();
+        calendarPage.find('.container.list').hide();
+    }
+})
 
 // 預約頁
 reservationPage.find('.meeting-room').on('click', () => {
